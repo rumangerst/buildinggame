@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "\nextends Control\n\nvar current_node = null\n\nfunc _ready():\n\tset_process(true)\n\nfunc set_data(node):\n\tcurrent_node = node\n\t\nfunc update_inventory():\n\t\n\tif not is_visible() or current_node == null or not current_node.is_initialized():\n\t\treturn\n\t\n\tvar inventory = current_node.get_inventory()\n\tvar game = current_node.get_game_client()\n\t\n\tget_node(\"Inventory\").clear()\n\t\t\t\n\tfor resource_key in inventory:\n\t\t\n\t\tvar resource_name = game.get_client_definitions().get_building_resources()[resource_key].get_resource_name()\n\t\tvar amount = inventory[resource_key]\n\t\t\n\t\tget_node(\"Inventory\").add_item(str(amount) + \"x \" + resource_name, null, false)\n\t\t\nfunc _process(delta):\n\t\n\tupdate_inventory()"
+
+[node name="Control" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1020.0
+margin/bottom = 770.0
+script/script = SubResource( 1 )
+
+[node name="Inventory" type="ItemList" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+

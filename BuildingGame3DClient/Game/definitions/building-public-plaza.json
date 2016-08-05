@@ -1,0 +1,50 @@
+{
+    "resources" : {
+    
+    },
+
+    "reactions" : {
+    
+        "plaza-foundation-build-progress" : { "reactants" : { "stone" : 2, "worktime" : 2, "money" : 20 }, "products" : { "add" : { "building-progress" : 10 } }, "duration" : 1 },
+        "plaza-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "public/plaza" }, "duration" : 1, "require" : {} }
+    },
+    
+    "reaction-sets" : {
+        "plaza-foundation-build" : { "reactions" : ["plaza-foundation-build-progress", "plaza-foundation-build"], "type" : "default", "client" : { "name" : "Building plaza" } }
+    },
+
+    "buildings" : {
+    "public/plaza" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : {},
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Public/Plaza.tscn",
+                "name" : "Plaza",
+                "category" : "public",
+                "buildable" : false
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        },    
+    "public/plaza/foundation" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : ["plaza-foundation-build"],
+            "neighbors" : { "economy/storagehouse" : 100, "meta/playerstartnode" : 0, "administration/palace" : 1000, "public/house" : 20 },
+            "reaction-slots" : 1,
+            "inventory-limits" : { "building-progress": 100 },
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Foundation.tscn",
+                "name" : "Plaza",
+                "category" : "public",
+                "buildable" : true
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        }    
+    }
+}

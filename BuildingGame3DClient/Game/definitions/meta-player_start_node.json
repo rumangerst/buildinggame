@@ -1,0 +1,34 @@
+{
+    "resources" : {    
+    
+    },
+
+    "reactions" : {
+    
+    
+    },
+    
+    "reaction-sets" : {    
+      
+    },
+
+    "buildings" : {
+    "meta/playerstartnode" : {
+            "type" : "meta",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ ],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : { },
+            "inventory" : { "money" : 100000, "worktime" : 200, "wood" : 200, "stone" : 100, "blueprint/administration/palace" : 1 },
+            "client" : {
+                "scene" : "res://Tiles/Misc/Empty.tscn",
+                "name" : "Player Start Node",
+                "category" : "meta",
+                "buildable" : false
+            },
+            "require-from-terrain" : {  }
+        }
+    }    
+    
+}

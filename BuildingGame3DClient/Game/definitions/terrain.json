@@ -1,0 +1,143 @@
+{
+    "resources" : {
+    },
+
+    "reactions" : {
+        "terrain-fresh-water" : { "reactants" : {}, "products" : { "add" : { "fresh-water" : 10 } }, "duration" : 1, "require" : {}, "sources" : [] },
+        "terrain-saline-water" : { "reactants" : {}, "products" : { "add" : { "saline-water" : 10 } }, "duration" : 1, "require" : {}, "sources" : [] },
+        "terrain-grass-fertility" : { "reactants" : {}, "products" : { "add" : { "fertility" : 1 } }, "duration" : 1, "require" : {}, "sources" : [] },
+        "terrain-meadow-fertility" : { "reactants" : {}, "products" : { "add" : { "fertility" : 2 } }, "duration" : 1, "require" : {}, "sources" : [] },
+        "terrain-fertile-meadow-fertility" : { "reactants" : {}, "products" : { "add" : { "fertility" : 3 } }, "duration" : 1, "require" : {}, "sources" : [] }
+    },
+    
+    "reaction-sets" : {
+        "terrain-fresh-water" : { "reactions" : [ "terrain-fresh-water" ], "type" : "mandatory", "client" : { "name" : "Produce fresh water" } },
+        "terrain-saline-water" : { "reactions" : [ "terrain-saline-water" ], "type" : "mandatory", "client" : { "name" : "Produce saline water" } },
+        "terrain-grass-fertility" : { "reactions" : [ "terrain-grass-fertility" ], "type" : "mandatory", "client" : { "name" : "Produce fertility" } },
+        "terrain-meadow-fertility" : { "reactions" : [ "terrain-meadow-fertility" ], "type" : "mandatory", "client" : { "name" : "Produce fertility" } },
+        "terrain-fertile-meadow-fertility" : { "reactions" : [ "terrain-fertile-meadow-fertility" ], "type" : "mandatory", "client" : { "name" : "Produce fertility" } }
+    },
+
+    "buildings" : {
+        "terrain/grass" : {
+            "type" : "terrain",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ "terrain-grass-fertility" ],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : { "fertility" : 5 },
+            "inventory" : { "solid-ground" : 1, "fertility" : 5 },
+            "client" : {
+                "name" : "Grass",
+                "scene" : "res://Tiles/Terrain/TerrainGrass.tscn",
+                "category" : "terrain",
+                "buildable" : true
+            }
+        },
+        "terrain/meadow" : {
+            "type" : "terrain",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ "terrain-meadow-fertility" ],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : { "fertility" : 10},
+            "inventory" : { "solid-ground" : 1, "fertility" : 10 },
+            "client" : {
+                "name" : "Meadow",
+                "scene" : "res://Tiles/Terrain/TerrainMeadow.tscn",
+                "category" : "terrain",
+                "buildable" : true
+            }
+        },
+        "terrain/fertile-meadow" : {
+            "type" : "terrain",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ "terrain-fertile-meadow-fertility" ],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : { "fertility" : 15},
+            "inventory" : { "solid-ground" : 1, "fertility" : 15 },
+            "client" : {
+                "name" : "Fertile meadow",
+                "scene" : "res://Tiles/Terrain/TerrainFertileMeadow.tscn",
+                "category" : "terrain",
+                "buildable" : true
+            }
+        },
+        "terrain/fresh-water" : {
+            "type" : "terrain",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ "terrain-fresh-water" ],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : { "fresh-water" : 100 },
+            "inventory" : { "fresh-water" : 100 },
+            "client" : {
+                "name" : "Fresh water",
+                "scene" : "res://Tiles/Terrain/TerrainWaterShallow.tscn",
+                "category" : "terrain",
+                "buildable" : true
+            }
+        },
+        "terrain/saline-water" : {
+            "type" : "terrain",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ "terrain-saline-water" ],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : { "saline-water" : 100 },
+            "inventory" : { "saline-water" : 100 },
+            "client" : {
+                "name" : "Saline water",
+                "scene" : "res://Tiles/Terrain/TerrainWaterDeeper.tscn",
+                "category" : "terrain",
+                "buildable" : true
+            }
+        },
+        "terrain/stone" : {
+            "type" : "terrain",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ ],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : { },
+            "inventory" : { "solid-ground" : 1, "stone" : 250 },
+            "client" : {
+                "name" : "Stone",
+                "scene" : "res://Tiles/Terrain/TerrainStone.tscn",
+                "category" : "terrain",
+                "buildable" : true
+            }
+        },
+        "terrain/clay" : {
+            "type" : "terrain",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ ],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : { },
+            "inventory" : { "solid-ground" : 1, "clay" : 250 },
+            "client" : {
+                "name" : "Clay",
+                "scene" : "res://Tiles/Terrain/TerrainClay.tscn",
+                "category" : "terrain",
+                "buildable" : true
+            }
+        },
+        "terrain/marble" : {
+            "type" : "terrain",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ ],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : { },
+            "inventory" : { "solid-ground" : 1, "marble" : 250 },
+            "client" : {
+                "name" : "Marble",
+                "scene" : "res://Tiles/Terrain/TerrainMarble.tscn",
+                "category" : "terrain",
+                "buildable" : true
+            }
+        }
+    }
+}

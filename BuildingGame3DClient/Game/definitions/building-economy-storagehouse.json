@@ -1,0 +1,55 @@
+{
+    "resources" : {
+    
+    },
+
+    "reactions" : {
+    
+        "storagehouse-foundation-build-progress" : { "reactants" : { "stone" : 1, "worktime" : 5, "wood" : 2, "money" : 10 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
+        "storagehouse-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/storagehouse" }, "duration" : 1, "require" : {} },
+        
+        "storagehouse-fetch-wood" : { "reactants" : { "wood" : 1 }, "products" : { "add" : { "wood" : 1 } }, "duration" : 1, "sources" : [ "meta/playerstartnode", "economy/tradepost" ]},
+        "storagehouse-fetch-stone" : { "reactants" : { "stone" : 1 }, "products" : { "add" : { "stone" : 1 } }, "duration" : 1, "sources" : [ "meta/playerstartnode", "economy/tradepost" ] }
+    },
+    
+    "reaction-sets" : {
+        "storagehouse-foundation-build" : { "reactions" : ["storagehouse-foundation-build-progress", "storagehouse-foundation-build"], "type" : "default", "client" : { "name" : "Building Storage house" } },
+        "storagehouse-fetch-wood" : { "reactions" : ["storagehouse-fetch-wood"], "type" : "optional", "client" : { "name" : "Fetch wood" } },
+        "storagehouse-fetch-stone" : { "reactions" : ["storagehouse-fetch-stone"], "type" : "optional", "client" : { "name" : "Fetch stone" } }
+    },
+
+    "buildings" : {
+    "economy/storagehouse" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ "storagehouse-fetch-wood", "storagehouse-fetch-stone" ],
+            "neighbors" : { "meta/playerstartnode" : 0, "economy/tradepost" : 10 },
+            "reaction-slots" : 3,
+            "inventory-limits" : {},
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Misc/Generic.tscn",
+                "name" : "Storage house",
+                "category" : "economy",
+                "buildable" : false
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        },    
+    "economy/storagehouse/foundation" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : ["storagehouse-foundation-build"],
+            "neighbors" : { "economy/storagehouse" : 100, "meta/playerstartnode" : 0, "administration/palace" : 1000, "public/house" : 20 },
+            "reaction-slots" : 1,
+            "inventory-limits" : { "building-progress": 100 },
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Foundation.tscn",
+                "name" : "Storage house",
+                "category" : "economy",
+                "buildable" : true
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        }    
+    }
+}

@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends ClientBuildingNode\n\nvar tree_meshes = [ \"res://Models/Parts/tree0.msh\" ]\nvar tree_mesh_instances = []\n\nfunc _ready():\n\t\n\tfor i in range(25):\n\t\t\n\t\tvar mesh = tree_meshes[randi() % tree_meshes.size()]\n\t\tvar pos = Vector3(rand_range(-1, 1), 0, rand_range(-1, 1))\n\t\tvar scale = rand_range(0.14, 0.24)\n\t\t\n\t\tvar instance = MeshInstance.new()\n\t\tinstance.set_mesh(load(mesh))\n\t\tinstance.set_translation(pos)\n\t\tinstance.set_scale(Vector3(scale,scale,scale))\n\t\tget_node(\"StaticBody\").add_child(instance)\n\t\t\n\t\ttree_mesh_instances.append(instance)\n\t\t\nfunc set_ghost():\n\tpass\n\t\t"
+
+[sub_resource type="BoxShape" id=2]
+
+extents = Vector3( 1, 1, 1 )
+
+[node name="ClientBuildingNode" type="ClientBuildingNode"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = SubResource( 1 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 0.8, 0, 0, 0, 1, 0, 0.8, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 0.8, 0, 0, 0, 1, 0, 0.8, 0 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+

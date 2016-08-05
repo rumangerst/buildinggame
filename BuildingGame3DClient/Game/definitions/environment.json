@@ -1,0 +1,78 @@
+{
+    "resources" : {
+    },
+
+    "reactions" : {
+    
+        "forest-grow" : { "reactants" : { "fertility" : 5 }, "products" : { "add" : { "tree" : 1 } }, "require" : {}, "duration" : 5 }    
+    },
+    
+    "reaction-sets" : {
+    
+        "forest-grow" : { "reactions" : [ "forest-grow" ], "type" : "mandatory", "client" : { "name" : "Grow trees" } }
+        
+    },
+
+    "buildings" : {
+        "environment/forest" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ "forest-grow" ],
+            "neighbors" : { "terrain/grass" : 0, "terrain/meadow" : 0, "terrain/fertile-meadow" : 0 },
+            "reaction-slots" : 1,
+            "inventory-limits" : { "tree" : 25 },
+            "inventory" : { "tree" : 25 },
+            "client" : {
+                "name" : "Forest",
+                "scene" : "res://Tiles/Environment/EnvironmentForest.tscn",
+                "category" : "environment",
+                "buildable" : true
+            }
+        },
+        "environment/silver-ore" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ ],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : { },
+            "inventory" : { "silver-ore" : 250 },
+            "client" : {
+                "name" : "Silver Ore",
+                "scene" : "res://Tiles/Environment/EnvironmentSilver.tscn",
+                "category" : "environment",
+                "buildable" : true
+            }
+        },
+        "environment/copper-ore" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ ],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : { },
+            "inventory" : { "copper-ore" : 250 },
+            "client" : {
+                "name" : "Copper Ore",
+                "scene" : "res://Tiles/Environment/EnvironmentCopper.tscn",
+                "category" : "environment",
+                "buildable" : true
+            }
+        },
+        "environment/tin-ore" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ ],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : { },
+            "inventory" : { "tin-ore" : 250 },
+            "client" : {
+                "name" : "Tin Ore",
+                "scene" : "res://Tiles/Environment/EnvironmentTin.tscn",
+                "category" : "environment",
+                "buildable" : true
+            }
+        }
+    }
+}

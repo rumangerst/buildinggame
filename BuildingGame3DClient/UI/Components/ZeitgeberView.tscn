@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends VBoxContainer\n\nvar zeitgeber_instance = null\nvar zeitgeber_update = 0\n\nfunc _ready():\t\n\tset_process(true)\n\nfunc _nodes_loaded():\n\t\n\tprint(\"Looking for Zeitgeber\")\n\t\n\tvar game = get_tree().get_root().get_node(\"world/BuildingGameClient\")\n\t\n\tfor node in game.get_meta_nodes():\n\t\t\n\t\tif node.get_node_type().get_id() == \"meta/zeitgeber\":\n\t\t\tzeitgeber_instance = node\n\t\t\t\n\t\t\tprint(\"Zeitgeber found.\")\n\t\t\t\nfunc update_information():\n\t\n\tif zeitgeber_instance != null:\n\t\t\n\t\tvar game = get_tree().get_root().get_node(\"world/BuildingGameClient\")\n\t\t\n\t\tvar inv = zeitgeber_instance.get_inventory()\n\t\tvar year = 0\n\t\tvar month = \"January\"\n\t\t\n\t\tfor res in inv:\n\t\t\n\t\t\tif res == \"zeitgeber/year\":\n\t\t\t\tyear = inv[\"zeitgeber/year\"]\n\t\t\telse:\n\t\t\t\tmonth = game.get_client_definitions().get_building_resources()[res].get_resource_name()\n\t\t\t\t\n\t\tget_node(\"Year\").set_text(\"Year \" + str(year))\n\t\tget_node(\"Month\").set_text(month)\n\t\nfunc _process(delta):\n\t\n\tzeitgeber_update += delta\n\t\n\tif zeitgeber_update >= 1:\n\t\tzeitgeber_update = 0\n\t\tupdate_information()\n\t\t\n"
+
+[node name="ZeitgeberView" type="VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 10.0
+margin/top = 0.0
+margin/right = 100.0
+margin/bottom = 50.0
+alignment = 1
+script/script = SubResource( 1 )
+
+[node name="Month" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 9.0
+margin/right = 104.0
+margin/bottom = 23.0
+text = "Unknown Month"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Year" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 27.0
+margin/right = 104.0
+margin/bottom = 41.0
+text = "Unknown Year"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+

@@ -1,0 +1,34 @@
+{
+    "resources" : {
+    
+        "solid-ground" : { "client" : { "name" : "Solid ground" } },
+        "building-progress" : { "client" : { "name" : "Building progress" } },
+        
+        "tree" : { "client" : { "name" : "Tree" } },
+        "wood" : { "client" : { "name" : "Wood" } },
+        
+        "money" : { "client" : { "name" : "Money" } },
+        "worktime" : { "client" : { "name" : "Work time" } },
+        
+        "silver-ore" : { "client" : { "name" : "Silver ore" } },
+        "copper-ore" : { "client" : { "name" : "Copper ore" } },
+        "tin-ore" : { "client" : { "name" : "Tin ore" } },
+        
+        "stone" : { "client" : { "name" : "Stone" } },
+        "clay" : { "client" : { "name" : "Clay" } },
+        "marble" : { "client" : { "name" : "Marble" } },
+    
+        "fertility" : { "client" : { "name" : "Fertility" } },
+        "fresh-water" : { "client" : { "name" : "Fresh water" } },
+        "saline-water" : { "client" : { "name" : "Saline water" } }
+    },
+
+    "reactions" : {
+    },
+    
+    "reaction-sets" : {
+    },
+
+    "buildings" : {
+    }
+}

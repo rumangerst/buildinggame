@@ -1,0 +1,87 @@
+[gd_scene load_steps=3 format=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Control\n\nvar current_node = null\nvar current_reaction_set = null\n\nfunc _ready():\n\tset_process(true)\n\t\nfunc set_data(node, reaction):\n\t\n\tcurrent_node = node\n\tcurrent_reaction_set = reaction\n\t\n\tget_node(\"ReactionName\").set_text(reaction.get_reaction_set_name())\n\t\nfunc _process(delta):\n\t\n\tif is_visible() and current_node != null and current_reaction_set != null:\n\t\t\n\t\tvar progress = current_node.get_reaction_progress(current_reaction_set.get_id())\n\t\tget_node(\"ReactionProgress\").set_value(progress)\n\t\t\n\t\tvar activated = current_node.get_enabled_optional_reactions()\n\t\t\n\t\tif current_reaction_set.get_id() in activated or current_reaction_set.get_reaction_set_type() == \"mandatory\":\n\t\t\tget_node(\"ShowActive\").show()\n\t\telse:\n\t\t\tget_node(\"ShowActive\").hide()\n\t\t\t\nfunc toggle_reaction():\n\t\n\tif current_reaction_set.get_reaction_set_type() == \"mandatory\":\n\t\treturn\n\t\n\tvar activated = current_node.get_enabled_optional_reactions()\n\t\n\tif current_reaction_set.get_id() in activated:\n\t\tcurrent_node.disable_optional_reaction(current_reaction_set.get_id())\n\telse:\n\t\tcurrent_node.enable_optional_reaction(current_reaction_set.get_id())\n\nfunc input_event(event):\n\t\n\tif event.type == InputEvent.MOUSE_BUTTON and not event.is_pressed():\t\t\n\t\tif event.button_index == BUTTON_LEFT:\n\t\t\ttoggle_reaction()\n"
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.207031, 0.207031, 0.207031, 1 )
+light_color = Color( 0.210938, 0.210938, 0.210938, 1 )
+dark_color = Color( 0.273438, 0.273438, 0.273438, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
+
+[node name="Control" type="Control"]
+
+rect/min_size = Vector2( 0, 70 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1020.0
+margin/bottom = 70.0
+script/script = SubResource( 1 )
+
+[node name="ShowActive" type="Panel" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="ReactionProgress" type="ProgressBar" parent="."]
+
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 10.0
+margin/top = 20.0
+margin/right = 4.0
+margin/bottom = 4.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.0
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+percent/visible = false
+
+[node name="ReactionName" type="Label" parent="."]
+
+anchor/right = 1
+focus/ignore_mouse = true
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 10.0
+margin/top = 10.0
+margin/right = 10.0
+margin/bottom = 44.0
+text = "Reaction"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="input_event" from="." to="." method="input_event"]
+
+

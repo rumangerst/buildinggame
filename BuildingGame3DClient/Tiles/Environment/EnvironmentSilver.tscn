@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends ClientBuildingNode\n\nvar resource_meshes = [ \"res://Models/Parts/stone0-silver.msh\" ]\nvar env_meshes = [ \"res://Models/Parts/stone0.msh\", \"res://Models/Parts/stone1.msh\" ]\nvar resource_mesh_instances = []\n\nfunc add_random(mesh):\n\t\n\tvar pos = Vector3(rand_range(-0.8, 0.8), 0, rand_range(-0.8, 0.8))\n\tvar scale = rand_range(0.04, 0.15)\n\tvar rotation = Vector3(0, rand_range(0,360), 0)\n\t\n\tvar instance = MeshInstance.new()\n\tinstance.set_mesh(load(mesh))\n\tinstance.set_translation(pos)\n\tinstance.set_scale(Vector3(scale,scale,scale))\n\tinstance.set_rotation_deg(rotation)\n\tget_node(\"StaticBody\").add_child(instance)\n\t\n\treturn instance\n\nfunc _ready():\n\t\n\tfor i in range(10):\n\t\t\n\t\tvar mesh = resource_meshes[randi() % resource_meshes.size()]\n\t\tresource_mesh_instances.append(add_random(mesh))\n\t\t\n\tfor i in range(10):\n\t\t\n\t\tvar mesh = env_meshes[randi() % env_meshes.size()]\n\t\tadd_random(mesh)\n\t\t\nfunc set_ghost():\n\tpass\n\t\t"
+
+[sub_resource type="BoxShape" id=2]
+
+extents = Vector3( 1, 1, 1 )
+
+[node name="ClientBuildingNode" type="ClientBuildingNode"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = SubResource( 1 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0.2, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0.2, 0 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+

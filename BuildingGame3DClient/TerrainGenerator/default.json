@@ -1,0 +1,108 @@
+{
+    "default-terrain" : "terrain/saline-water",
+    "terrain" : {
+        "terrain/saline-water" : {
+            "priority" : 0,
+            "generator" : { "frequency" : 0.05, "octaves" : 1, "seed" : "base" },
+            "at" : [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1],
+            "min-build-height" : 0,
+            "max-build-height" : 0,
+            "restrict-to" : [],
+            "height-generator" : { "frequency" : 0.1, "octaves" : 1, "seed" : "terrain-height", "multiplier" : 1 } 
+        },
+        "terrain/fresh-water" : {
+            "priority" : 2,
+            "generator" : { "frequency" : 0.05, "octaves" : 1, "seed" : "base" },
+            "at" : [9,10],
+            "min-build-height" : 0,
+            "max-build-height" : 0,
+            "restrict-to" : [],
+            "height-generator" : { "frequency" : 0.1, "octaves" : 1, "seed" : "terrain-height", "multiplier" : 1 } 
+        },
+        "terrain/grass" : {
+            "priority" : 1,
+            "generator" : { "frequency" : 0.05, "octaves" : 1, "seed" : "base" },
+            "at" : [0,1,2,3,4,5,6,7,8],
+            "min-build-height" : 0,
+            "max-build-height" : 10,
+            "restrict-to" : [],
+            "height-generator" : { "frequency" : 0.1, "octaves" : 1, "seed" : "terrain-height", "multiplier" : 1 } 
+        },
+        "terrain/meadow" : {
+            "priority" : 3,
+            "generator" : { "frequency" : 0.05, "octaves" : 3, "seed" : "meadow" },
+            "at" : [5,6,7],
+            "min-build-height" : 0,
+            "max-build-height" : 10,
+            "restrict-to" : [ "terrain/grass" ],
+            "height-generator" : { "frequency" : 0.1, "octaves" : 1, "seed" : "terrain-height", "multiplier" : 1 } 
+        },
+        "terrain/fertile-meadow" : {
+            "priority" : 4,
+            "generator" : { "frequency" : 0.05, "octaves" : 3, "seed" : "meadow" },
+            "at" : [8,9,10],
+            "min-build-height" : 0,
+            "max-build-height" : 10,
+            "restrict-to" : [ "terrain/grass", "terrain/meadow" ],
+            "height-generator" : { "frequency" : 0.1, "octaves" : 1, "seed" : "terrain-height", "multiplier" : 1 } 
+        },
+        "terrain/stone" : {
+            "priority" : 5,
+            "generator" : { "frequency" : 0.1, "octaves" : 3, "seed" : "stone" },
+            "at" : [5,6,7,8,9,10],
+            "min-build-height" : 1,
+            "max-build-height" : 10,
+            "restrict-to" : [],
+            "height-generator" : { "frequency" : 0.1, "octaves" : 3, "seed" : "terrain-stone-height", "multiplier" : 2 } 
+        },
+        "terrain/clay" : {
+            "priority" : 6,
+            "generator" : { "frequency" : 0.1, "octaves" : 3, "seed" : "base" },
+            "at" : [-4,-3,-2,-1,9,10],
+            "min-build-height" : 1,
+            "max-build-height" : 10,
+            "restrict-to" : ["terrain/stone"],
+            "height-generator" : { "frequency" : 0.1, "octaves" : 3, "seed" : "terrain-stone-height", "multiplier" : 2 } 
+        },
+        "terrain/marble" : {
+            "priority" : 6,
+            "generator" : { "frequency" : 0.1, "octaves" : 3, "seed" : "base" },
+            "at" : [2,3,4,5],
+            "min-build-height" : 1,
+            "max-build-height" : 10,
+            "restrict-to" : ["terrain/stone"],
+            "height-generator" : { "frequency" : 0.1, "octaves" : 3, "seed" : "terrain-stone-height", "multiplier" : 2 } 
+        }
+    },
+    "buildings" : {
+        "environment/forest" : {
+            "priority" : 0,
+            "generator" : { "frequency" : 0.1, "octaves" : 3, "seed" : "forest" },
+            "at" : [7,8,9,10],
+            "on" : [ "terrain/grass", "terrain/meadow", "terrain/fertile-meadow", "terrain/stone" ],
+            "probability" : 1
+        },
+        "environment/copper-ore" : {
+            "priority" : 0,
+            "generator" : { "frequency" : 0.1, "octaves" : 3, "seed" : "ore" },
+            "at" : [-2,-3,7,8,9,10],
+            "on" : [ "terrain/stone", "terrain/marble"],
+            "probability" : 0.5
+        },
+        "environment/tin-ore" : {
+            "priority" : 0,
+            "generator" : { "frequency" : 0.1, "octaves" : 3, "seed" : "ore" },
+            "at" : [-2,-3,7,8,9,10],
+            "on" : [ "terrain/stone", "terrain/marble"],
+            "probability" : 0.4
+        },
+        "environment/silver-ore" : {
+            "priority" : 0,
+            "generator" : { "frequency" : 0.1, "octaves" : 3, "seed" : "ore" },
+            "at" : [-2,-3,7,8,9,10],
+            "on" : [ "terrain/stone", "terrain/marble"],
+            "probability" : 0.3
+        }
+    },
+    "meta" : [ "meta/zeitgeber", "meta/playerstartnode" ]
+}

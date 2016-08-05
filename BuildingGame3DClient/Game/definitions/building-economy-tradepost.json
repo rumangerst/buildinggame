@@ -1,0 +1,55 @@
+{
+    "resources" : {
+    
+    },
+
+    "reactions" : {
+    
+        "tradepost-foundation-build-progress" : { "reactants" : { "worktime" : 2, "wood" : 2, "money" : 10 }, "products" : { "add" : { "building-progress" : 20 } }, "duration" : 1 },
+        "tradepost-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/tradepost" }, "duration" : 1, "require" : {} },
+        
+        "tradepost-buy-wood" : { "reactants" : { "money" : 10 }, "products" : { "add" : { "wood" : 20 } }, "duration" : 5 },
+        "tradepost-buy-stone" : { "reactants" : { "money" : 20 }, "products" : { "add" : { "stone" : 10 } }, "duration" : 10 }
+    },
+    
+    "reaction-sets" : {
+        "tradepost-foundation-build" : { "reactions" : ["tradepost-foundation-build-progress", "tradepost-foundation-build"], "type" : "default", "client" : { "name" : "Building Trade post" } },
+        "tradepost-buy-wood" : { "reactions" : ["tradepost-buy-wood"], "type" : "optional", "client" : { "name" : "Buy wood" } },
+        "tradepost-buy-stone" : { "reactions" : ["tradepost-buy-stone"], "type" : "optional", "client" : { "name" : "Buy stone" } }
+    },
+
+    "buildings" : {
+    "economy/tradepost" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ "tradepost-buy-wood", "tradepost-buy-stone" ],
+            "neighbors" : { "administration/palace" : 1000 },
+            "reaction-slots" : 3,
+            "inventory-limits" : {},
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Misc/Generic.tscn",
+                "name" : "Trade post",
+                "category" : "economy",
+                "buildable" : false
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        },    
+    "economy/tradepost/foundation" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : ["tradepost-foundation-build"],
+            "neighbors" : { "economy/storagehouse" : 100, "meta/playerstartnode" : 0, "administration/palace" : 1000, "public/house" : 20 },
+            "reaction-slots" : 1,
+            "inventory-limits" : { "building-progress": 100 },
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Foundation.tscn",
+                "name" : "Trade post",
+                "category" : "economy",
+                "buildable" : true
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        }    
+    }
+}

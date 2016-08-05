@@ -1,0 +1,50 @@
+{
+    "resources" : {
+    
+    },
+
+    "reactions" : {
+    
+        "house-foundation-build-progress" : { "reactants" : { "stone" : 1, "wood" : 5, "worktime" : 5 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
+        "house-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "public/house" }, "duration" : 1, "require" : {} }
+    },
+    
+    "reaction-sets" : {
+        "house-foundation-build" : { "reactions" : ["house-foundation-build-progress", "house-foundation-build"], "type" : "default", "client" : { "name" : "Building House" } }
+    },
+
+    "buildings" : {
+    "public/house" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : {},
+            "inventory" : {},
+            "client" : {
+                "scenes" : { "House" : "res://Tiles/Misc/Generic.tscn" },
+                "name" : "House",
+                "category" : "public",
+                "buildable" : false
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        },    
+    "public/house/foundation" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : ["house-foundation-build"],
+            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100 , "administration/palace" : 1000, "public/house" : 20 },
+            "reaction-slots" : 1,
+            "inventory-limits" : { "building-progress": 100 },
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Foundation.tscn",
+                "name" : "House",
+                "category" : "public",
+                "buildable" : true
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        }    
+    }
+}

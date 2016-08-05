@@ -1,0 +1,50 @@
+{
+    "resources" : {
+    
+    },
+
+    "reactions" : {
+    
+        "columns-foundation-build-progress" : { "reactants" : { "stone" : 5, "worktime" : 20, "marble" : 10 }, "products" : { "add" : { "building-progress" : 20 } }, "duration" : 1 },
+        "columns-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "beautification/columns" }, "duration" : 1, "require" : {} }
+    },
+    
+    "reaction-sets" : {
+        "columns-foundation-build" : { "reactions" : ["columns-foundation-build-progress", "columns-foundation-build"], "type" : "default", "client" : { "name" : "Building Columns" } }
+    },
+
+    "buildings" : {
+    "beautification/columns" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : {},
+            "inventory" : {},
+            "client" : {
+                "scenes" : { "Columns" : "res://Tiles/Beautification/Columns.tscn" },
+                "name" : "Columns",
+                "category" : "beautification",
+                "buildable" : false
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        },    
+    "beautification/columns/foundation" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : ["columns-foundation-build"],
+            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100 , "administration/palace" : 1000, "public/house" : 20 },
+            "reaction-slots" : 1,
+            "inventory-limits" : { "building-progress": 100 },
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Foundation.tscn",
+                "name" : "Columns",
+                "category" : "beautification",
+                "buildable" : true
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        }    
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "resources" : {
+    
+        "blueprint/administration/palace" : { "client" : { "name" : "Blueprint: Palace" } }
+    
+    },
+
+    "reactions" : {
+        "palace-foundation-pull-money" : { "reactants" : { "money" : 1000 }, "products" : { "add" : { "money" : 1000 }}, "duration" : 1, "require" : {}, "sources" : ["meta/playerstartnode"] },
+        
+        "palace-foundation-build-progress" : { "reactants" : { "wood" : 5, "stone" : 1, "worktime" : 10 }, "products" : { "add" : { "building-progress" : 10 } }, "duration" : 1, "require" : { "blueprint/administration/palace" : 1 } },
+        "palace-foundation-build" : { "reactants" : { "building-progress" : 100, "blueprint/administration/palace" : 1 }, "products" : {}, "transmute" : { "building-type" : "administration/palace" }, "duration" : 1, "require" : {} },
+        
+        "palace-generate-worktime" : { "reactants" : { "money" : 5 }, "products" : { "add" : { "worktime" : 1 } }, "duration" : 1 }
+    },
+    
+    "reaction-sets" : {
+        "palace-pull-initial" : { "reactions" : ["palace-foundation-pull-money"], "type" : "mandatory", "client" : { "name" : "Fetch starter resources" } },
+        "palace-foundation-build" : { "reactions" : ["palace-foundation-build-progress", "palace-foundation-build"], "type" : "default", "client" : { "name" : "Building palace" } },
+        "palace-generate-worktime" : { "reactions" : ["palace-generate-worktime"], "type" : "optional", "client" : { "name" : "Pay servants to work" } }
+    },
+
+    "buildings" : {
+    "administration/palace" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ "palace-pull-initial", "palace-generate-worktime" ],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : { "worktime" : 5 },
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Misc/Generic.tscn",
+                "name" : "Palace",
+                "category" : "administration",
+                "buildable" : false
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        },    
+    "administration/palace/foundation" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : ["palace-pull-initial", "palace-foundation-build"],
+            "neighbors" : { "meta/playerstartnode" : 0 },
+            "reaction-slots" : 1,
+            "inventory-limits" : { "building-progress": 100 },
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Foundation.tscn",
+                "name" : "Palace",
+                "category" : "administration",
+                "buildable" : true
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        }    
+    }
+}

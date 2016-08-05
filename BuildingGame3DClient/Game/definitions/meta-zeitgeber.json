@@ -1,0 +1,67 @@
+{
+    "resources" : {
+    
+        "zeitgeber/jan" : { "client" : { "name" : "January" } },
+        "zeitgeber/feb" : { "client" : { "name" : "February" } },
+        "zeitgeber/mar" : { "client" : { "name" : "March" } },
+        "zeitgeber/apr" : { "client" : { "name" : "April" } },
+        "zeitgeber/may" : { "client" : { "name" : "May" } },
+        "zeitgeber/jun" : { "client" : { "name" : "June" } },
+        "zeitgeber/jul" : { "client" : { "name" : "July" } },
+        "zeitgeber/aug" : { "client" : { "name" : "August" } },
+        "zeitgeber/sep" : { "client" : { "name" : "September" } },
+        "zeitgeber/oct" : { "client" : { "name" : "October" } },
+        "zeitgeber/nov" : { "client" : { "name" : "November" } },
+        "zeitgeber/dec" : { "client" : { "name" : "December" } },
+        "zeitgeber/year" : { "client" : { "name" : "Year" } }
+    
+    },
+
+    "reactions" : {
+    
+        "meta-zeitgeber-jan" : { "reactants" : { "zeitgeber/dec" : 1 }, "products" : { "add" : { "zeitgeber/year" : 1 }, "set" : { "zeitgeber/dec" : 0, "zeitgeber/jan" : 2, "zeitgeber/dec" : 0 } }, "require" : {}, "duration" : 60 },
+        "meta-zeitgeber-feb" : { "reactants" : { "zeitgeber/jan" : 1 }, "products" : { "set" : { "zeitgeber/jan" : 0, "zeitgeber/feb" : 2 } }, "require" : {}, "duration" : 60 },
+        "meta-zeitgeber-mar" : { "reactants" : { "zeitgeber/feb" : 1 }, "products" : { "set" : { "zeitgeber/feb" : 0, "zeitgeber/mar" : 2 } }, "require" : {}, "duration" : 60 },
+        "meta-zeitgeber-apr" : { "reactants" : { "zeitgeber/mar" : 1 }, "products" : { "set" : { "zeitgeber/mar" : 0, "zeitgeber/apr" : 2 } }, "require" : {}, "duration" : 60 },
+        "meta-zeitgeber-may" : { "reactants" : { "zeitgeber/apr" : 1 }, "products" : { "set" : { "zeitgeber/apr" : 0, "zeitgeber/may" : 2 } }, "require" : {}, "duration" : 60 },
+        "meta-zeitgeber-jun" : { "reactants" : { "zeitgeber/may" : 1 }, "products" : { "set" : { "zeitgeber/may" : 0, "zeitgeber/jun" : 2 } }, "require" : {}, "duration" : 60 },
+        "meta-zeitgeber-jul" : { "reactants" : { "zeitgeber/jun" : 1 }, "products" : { "set" : { "zeitgeber/jun" : 0, "zeitgeber/jul" : 2 } }, "require" : {}, "duration" : 60 },
+        "meta-zeitgeber-aug" : { "reactants" : { "zeitgeber/jul" : 1 }, "products" : { "set" : { "zeitgeber/jul" : 0, "zeitgeber/aug" : 2 } }, "require" : {}, "duration" : 60 },
+        "meta-zeitgeber-sep" : { "reactants" : { "zeitgeber/aug" : 1 }, "products" : { "set" : { "zeitgeber/aug" : 0, "zeitgeber/sep" : 2 } }, "require" : {}, "duration" : 60 },
+        "meta-zeitgeber-oct" : { "reactants" : { "zeitgeber/sep" : 1 }, "products" : { "set" : { "zeitgeber/sep" : 0, "zeitgeber/oct" : 2 } }, "require" : {}, "duration" : 60 },
+        "meta-zeitgeber-nov" : { "reactants" : { "zeitgeber/oct" : 1 }, "products" : { "set" : { "zeitgeber/oct" : 0, "zeitgeber/nov" : 2 } }, "require" : {}, "duration" : 60 },
+        "meta-zeitgeber-dec" : { "reactants" : { "zeitgeber/nov" : 1 }, "products" : { "set" : { "zeitgeber/nov" : 0, "zeitgeber/dec" : 2 } }, "require" : {}, "duration" : 60 }
+    
+    },
+    
+    "reaction-sets" : {
+    
+        "meta-zeitgeber-months" : { "reactions" : [ "meta-zeitgeber-jan", "meta-zeitgeber-feb", "meta-zeitgeber-mar",
+                                                    "meta-zeitgeber-apr", "meta-zeitgeber-may", "meta-zeitgeber-jun",
+                                                    "meta-zeitgeber-jul", "meta-zeitgeber-aug", "meta-zeitgeber-sep",
+                                                    "meta-zeitgeber-oct", "meta-zeitgeber-nov", "meta-zeitgeber-dec" ],
+                                    "type" : "mandatory",
+                                    "client" : { "name" : "Control time" }}
+    
+    },
+
+    "buildings" : {
+    "meta/zeitgeber" : {
+            "type" : "meta",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ "meta-zeitgeber-months" ],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : { },
+            "inventory" : { "zeitgeber/jan" : 2 },
+            "client" : {
+                "scene" : "res://Tiles/Misc/Empty.tscn",
+                "name" : "Zeitgeber",
+                "category" : "meta",
+                "buildable" : false
+            },
+            "require-from-terrain" : {  }
+        }
+    }    
+    
+}
