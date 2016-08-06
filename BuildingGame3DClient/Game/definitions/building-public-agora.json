@@ -17,7 +17,7 @@
     "public/agora" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
-            "reactions" : [],
+            "reactions" : [ "erosion-1" ],
             "neighbors" : { "economy/silo" : 30 },
             "reaction-slots" : 1,
             "inventory-limits" : {},

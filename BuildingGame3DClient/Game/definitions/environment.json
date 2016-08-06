@@ -46,14 +46,14 @@
                 "buildable" : true
             }
         },
-        "environment/seaurchins" : {
+        "environment/sea-urchins" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
             "reactions" : [ ],
             "neighbors" : { },
             "reaction-slots" : 1,
-            "inventory-limits" : { "seaurchins" : 50 },
-            "inventory" : { "seaurchins" : 50 },
+            "inventory-limits" : { "sea-urchins" : 50 },
+            "inventory" : { "sea-urchins" : 50 },
             "client" : {
                 "name" : "Sea urchins",
                 "description" : "A colony of seau urchins",

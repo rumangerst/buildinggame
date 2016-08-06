@@ -2,6 +2,7 @@
     "resources" : {
     
         "solid-ground" : { "client" : { "name" : "Solid ground" } },
+        "water-ground" : { "client" : { "name" : "Water ground" } },
         "building-progress" : { "client" : { "name" : "Building progress" } },
         
         "tree" : { "client" : { "name" : "Tree" } },
@@ -12,8 +13,11 @@
         
         "amphora" : { "client" : { "name" : "Amphora" } },
         
-        "fish" : { "client" : { "name" : "Fish" } },
-        "seaurchins" : { "client" : { "name" : "Sea urchins" } },
+        "fish" : { "client" : { "name" : "Fish (Alive)" } },
+        "sea-urchins" : { "client" : { "name" : "Sea urchins (Alive)" } },
+        "food-fish" : { "client" : { "name" : "Fish" } },
+        "food-salted-fish" : { "client" : { "name" : "Salted fish" } },
+        "food-sea-urchins" : { "client" : { "name" : "Sea urchins" } },
         
         "silver-ore" : { "client" : { "name" : "Silver ore" } },
         "copper-ore" : { "client" : { "name" : "Copper ore" } },

@@ -1,0 +1,52 @@
+{
+    "resources" : {
+    
+    },
+
+    "reactions" : {
+    
+        "smeltery-foundation-build-progress" : { "reactants" : { "stone" : 10, "worktime" : 10 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
+        "smeltery-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/smeltery" }, "duration" : 1, "require" : {} }
+    },
+    
+    "reaction-sets" : {
+        "smeltery-foundation-build" : { "reactions" : ["smeltery-foundation-build-progress", "smeltery-foundation-build"], "type" : "default", "client" : { "name" : "Building Smeltery" } }
+    },
+
+    "buildings" : {
+    "economy/smeltery" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ "erosion-1" ],
+            "neighbors" : { "economy/mine" : 100, "economy/storagehouse" : 100 },
+            "reaction-slots" : 1,
+            "inventory-limits" : {},
+            "inventory" : {},
+            "client" : {
+                "scenes" : { "Smeltery" : "res://Tiles/Misc/Generic.tscn" },
+                "name" : "Smeltery",
+                "description" : "Smelts ores into useful materials",
+                "category" : "economy",
+                "buildable" : false
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        },    
+    "economy/smeltery/foundation" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : ["smeltery-foundation-build"],
+            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "public/house" : 20 },
+            "reaction-slots" : 1,
+            "inventory-limits" : { "building-progress": 100 },
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Foundation.tscn",
+                "name" : "Smeltery",
+                "description" : "Smelts ores into useful materials",
+                "category" : "economy",
+                "buildable" : true
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        }    
+    }
+}

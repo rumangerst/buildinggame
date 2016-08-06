@@ -24,7 +24,7 @@
     "administration/palace" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
-            "reactions" : [ "palace-pull-initial", "palace-generate-worktime" ],
+            "reactions" : [ "erosion-1", "palace-pull-initial", "palace-generate-worktime" ],
             "neighbors" : {},
             "reaction-slots" : 1,
             "inventory-limits" : { "worktime" : 5 },
@@ -36,7 +36,8 @@
                 "category" : "administration",
                 "buildable" : false
             },
-            "require-from-terrain" : { "solid-ground" : 1 }
+            "require-from-terrain" : { "solid-ground" : 1 },
+            "provides" : ["administration/palace"]
         },    
     "administration/palace/foundation" : {
             "type" : "building",

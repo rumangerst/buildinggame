@@ -1,0 +1,31 @@
+{
+    "resources" : {
+    
+    },
+
+    "reactions" : {
+    },
+    
+    "reaction-sets" : {
+    },
+
+    "buildings" : {
+    "environment/ruins" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [],
+            "neighbors" : {},
+            "reaction-slots" : 1,
+            "inventory-limits" : {},
+            "inventory" : {},
+            "client" : {
+                "scenes" : { "Ruins" : "res://Tiles/Misc/Generic.tscn" },
+                "name" : "Ruins",
+                "description" : "A destroyed building",
+                "category" : "environment",
+                "buildable" : true
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        }
+    }
+}

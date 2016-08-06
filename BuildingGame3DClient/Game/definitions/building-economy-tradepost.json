@@ -28,7 +28,7 @@
     "economy/tradepost" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
-            "reactions" : [ "tradepost-buy-wood", "tradepost-buy-stone", "tradepost-buy-marble", "tradepost-buy-amphora" ],
+            "reactions" : [ "erosion-1", "tradepost-buy-wood", "tradepost-buy-stone", "tradepost-buy-marble", "tradepost-buy-amphora" ],
             "neighbors" : { "administration/palace" : 1000 },
             "reaction-slots" : 3,
             "inventory-limits" : {},

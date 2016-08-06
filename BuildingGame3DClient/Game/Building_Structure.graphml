@@ -19,7 +19,7 @@
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="311.0" y="149.0"/>
           <y:Fill color="#CCFFCC" color2="#CCFFCC" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="38.08984375" x="20.955078125" y="11.015625">Grass<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -35,7 +35,7 @@
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="421.0" y="149.0"/>
           <y:Fill color="#CCFFCC" color2="#CCFFCC" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="53.86328125" x="13.068359375" y="11.015625">Meadow<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -51,7 +51,7 @@
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="531.0" y="149.0"/>
           <y:Fill color="#CCFFCC" color2="#CCFFCC" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="53.86328125" x="13.068359375" y="4.03125">Fertile
 Meadow<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -68,7 +68,7 @@ Meadow<y:LabelModel>
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="641.0" y="149.0"/>
           <y:Fill color="#CCFFCC" color2="#CCFFCC" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="40.240234375" x="19.8798828125" y="4.03125">Fresh
 Water<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -85,7 +85,7 @@ Water<y:LabelModel>
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="751.0" y="149.0"/>
           <y:Fill color="#CCFFCC" color2="#CCFFCC" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="40.626953125" x="19.6865234375" y="4.03125">Saline
 Water<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -102,7 +102,7 @@ Water<y:LabelModel>
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="641.0" y="252.0"/>
           <y:Fill color="#FFFF99" color2="#FFFF99" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="28.09375" x="25.953125" y="11.015625">Fish<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -118,7 +118,7 @@ Water<y:LabelModel>
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="751.0" y="252.0"/>
           <y:Fill color="#FFFF99" color2="#FFFF99" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="49.111328125" x="15.4443359375" y="4.03125">Sea
 Urchins<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -135,7 +135,7 @@ Urchins<y:LabelModel>
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="751.0" y="355.0"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="69.02734375" x="5.486328125" y="4.03125">Sea Urchin
 Quay<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -152,7 +152,7 @@ Quay<y:LabelModel>
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="641.0" y="355.0"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="46.650390625" x="16.6748046875" y="4.03125">Fishing
 Quay<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -169,7 +169,7 @@ Quay<y:LabelModel>
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="751.0" y="458.0"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="52.80859375" x="13.595703125" y="11.015625">Harbour<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -185,7 +185,7 @@ Quay<y:LabelModel>
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="861.0" y="252.0"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:BorderStyle color="#000000" type="line" width="3.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="60.625" x="9.6875" y="11.015625">Salt Pond<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -350,10 +350,10 @@ Pasture<y:LabelModel>
     <node id="n20">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="40.0" width="80.0" x="-19.0" y="355.0"/>
-          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="42.009765625" x="18.9951171875" y="11.015625">Stable<y:LabelModel>
+          <y:Geometry height="40.0" width="80.0" x="971.0" y="149.0"/>
+          <y:Fill color="#CCFFCC" color2="#CCFFCC" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="30.16796875" x="24.916015625" y="11.015625">Clay<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -366,10 +366,10 @@ Pasture<y:LabelModel>
     <node id="n21">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="40.0" width="80.0" x="971.0" y="149.0"/>
+          <y:Geometry height="40.0" width="80.0" x="1081.0" y="149.0"/>
           <y:Fill color="#CCFFCC" color2="#CCFFCC" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="30.16796875" x="24.916015625" y="11.015625">Clay<y:LabelModel>
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="38.65234375" x="20.673828125" y="11.015625">Stone<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -382,10 +382,10 @@ Pasture<y:LabelModel>
     <node id="n22">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="40.0" width="80.0" x="1081.0" y="149.0"/>
+          <y:Geometry height="40.0" width="80.0" x="1191.0" y="149.0"/>
           <y:Fill color="#CCFFCC" color2="#CCFFCC" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="38.65234375" x="20.673828125" y="11.015625">Stone<y:LabelModel>
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="44.974609375" x="17.5126953125" y="11.015625">Marble<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -398,10 +398,11 @@ Pasture<y:LabelModel>
     <node id="n23">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="40.0" width="80.0" x="1191.0" y="149.0"/>
-          <y:Fill color="#CCFFCC" color2="#CCFFCC" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="44.974609375" x="17.5126953125" y="11.015625">Marble<y:LabelModel>
+          <y:Geometry height="40.0" width="80.0" x="1301.0" y="245.0"/>
+          <y:Fill color="#FFFF99" color2="#FFFF99" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="37.703125" x="21.1484375" y="4.03125">Silver
+Ore<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -414,10 +415,10 @@ Pasture<y:LabelModel>
     <node id="n24">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="40.0" width="80.0" x="1301.0" y="245.0"/>
+          <y:Geometry height="40.0" width="80.0" x="1411.0" y="245.0"/>
           <y:Fill color="#FFFF99" color2="#FFFF99" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="37.703125" x="21.1484375" y="4.03125">Silver
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="47.271484375" x="16.3642578125" y="4.03125">Copper
 Ore<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -431,10 +432,10 @@ Ore<y:LabelModel>
     <node id="n25">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="40.0" width="80.0" x="1411.0" y="245.0"/>
+          <y:Geometry height="40.0" width="80.0" x="1521.0" y="245.0"/>
           <y:Fill color="#FFFF99" color2="#FFFF99" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="47.271484375" x="16.3642578125" y="4.03125">Copper
+          <y:BorderStyle color="#000000" type="line" width="7.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="25.76171875" x="27.119140625" y="4.03125">Tin
 Ore<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -448,26 +449,9 @@ Ore<y:LabelModel>
     <node id="n26">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="40.0" width="80.0" x="1521.0" y="245.0"/>
-          <y:Fill color="#FFFF99" color2="#FFFF99" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="25.76171875" x="27.119140625" y="4.03125">Tin
-Ore<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-        </y:GenericNode>
-      </data>
-    </node>
-    <node id="n27">
-      <data key="d6">
-        <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="1301.0" y="355.0"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:BorderStyle color="#000000" type="line" width="3.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="32.67578125" x="23.662109375" y="11.015625">Mine<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -478,23 +462,7 @@ Ore<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n28">
-      <data key="d6">
-        <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="40.0" width="80.0" x="971.0" y="355.0"/>
-          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="49.638671875" x="15.1806640625" y="11.015625">Clay pit<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-        </y:GenericNode>
-      </data>
-    </node>
-    <node id="n29">
+    <node id="n27">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="-239.0" y="252.0"/>
@@ -510,13 +478,13 @@ Ore<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n30">
+    <node id="n28">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="-239.0" y="355.0"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="74.1484375" x="2.92578125" y="11.015625">Lumberjack<y:LabelModel>
+          <y:BorderStyle color="#000000" type="line" width="3.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="74.095703125" x="2.9521484375" y="11.015625">Woodcutter<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -526,7 +494,7 @@ Ore<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n31">
+    <node id="n29">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="421.0" y="491.0"/>
@@ -542,7 +510,7 @@ Ore<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n32">
+    <node id="n30">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="421.0" y="561.0"/>
@@ -558,46 +526,12 @@ Ore<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n33">
+    <node id="n31">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="1301.0" y="561.0"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="56.78125" x="11.609375" y="4.03125">Bronze
-smeltery<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-        </y:GenericNode>
-      </data>
-    </node>
-    <node id="n34">
-      <data key="d6">
-        <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="40.0" width="80.0" x="1411.0" y="561.0"/>
-          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="56.78125" x="11.609375" y="4.03125">Silver
-smeltery<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-        </y:GenericNode>
-      </data>
-    </node>
-    <node id="n35">
-      <data key="d6">
-        <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="40.0" width="80.0" x="1301.0" y="631.0"/>
-          <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:BorderStyle color="#000000" type="line" width="3.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="58.146484375" x="10.9267578125" y="11.015625">Smeltery<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -608,7 +542,7 @@ smeltery<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n36">
+    <node id="n32">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="1301.0" y="767.0"/>
@@ -624,12 +558,12 @@ smeltery<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n37">
+    <node id="n33">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="971.0" y="561.0"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:BorderStyle color="#000000" type="line" width="3.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="47.40625" x="16.296875" y="11.015625">Pottery<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -640,7 +574,7 @@ smeltery<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n38">
+    <node id="n34">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="1081.0" y="561.0"/>
@@ -657,7 +591,7 @@ manufacture<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n39">
+    <node id="n35">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="751.0" y="767.0"/>
@@ -673,7 +607,7 @@ manufacture<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n40">
+    <node id="n36">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="421.0" y="842.0"/>
@@ -690,7 +624,7 @@ house<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n41">
+    <node id="n37">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="311.0" y="842.0"/>
@@ -706,7 +640,7 @@ house<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n42">
+    <node id="n38">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="421.0" y="767.0"/>
@@ -722,7 +656,7 @@ house<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n43">
+    <node id="n39">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="1242.48828125" y="842.0"/>
@@ -738,7 +672,7 @@ house<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n44">
+    <node id="n40">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="311.0" y="767.0"/>
@@ -755,7 +689,7 @@ plant garden<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n45">
+    <node id="n41">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="-239.0" y="767.0"/>
@@ -772,7 +706,7 @@ collector<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n46">
+    <node id="n42">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="-239.0" y="842.0"/>
@@ -788,7 +722,7 @@ collector<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n47">
+    <node id="n43">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="-129.0" y="767.0"/>
@@ -805,7 +739,7 @@ school<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n48">
+    <node id="n44">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="-129.0" y="842.0"/>
@@ -822,7 +756,7 @@ podium<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n49">
+    <node id="n45">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="-19.0" y="842.0"/>
@@ -838,7 +772,7 @@ podium<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n50">
+    <node id="n46">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="91.0" y="842.0"/>
@@ -854,7 +788,7 @@ podium<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n51">
+    <node id="n47">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="91.0" y="767.0"/>
@@ -871,7 +805,7 @@ school<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n52">
+    <node id="n48">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="201.0" y="767.0"/>
@@ -887,7 +821,7 @@ school<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n53">
+    <node id="n49">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="201.0" y="842.0"/>
@@ -903,7 +837,7 @@ school<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n54">
+    <node id="n50">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="1521.0" y="842.0"/>
@@ -919,7 +853,7 @@ school<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n55">
+    <node id="n51">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="1631.0" y="842.0"/>
@@ -935,7 +869,7 @@ school<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n56">
+    <node id="n52">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="1741.0" y="842.0"/>
@@ -951,7 +885,7 @@ school<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n57">
+    <node id="n53">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="1851.0" y="842.0"/>
@@ -968,7 +902,7 @@ garden<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n58">
+    <node id="n54">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="751.0" y="973.0"/>
@@ -984,7 +918,7 @@ garden<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n59">
+    <node id="n55">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="1961.0" y="842.0"/>
@@ -1000,7 +934,7 @@ garden<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n60">
+    <node id="n56">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="2071.0" y="842.0"/>
@@ -1016,7 +950,7 @@ garden<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n61">
+    <node id="n57">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.start2">
           <y:Geometry height="40.0" width="80.0" x="1132.48828125" y="842.0"/>
@@ -1032,7 +966,7 @@ garden<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n62">
+    <node id="n58">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="751.0" y="1100.2811671087534"/>
@@ -1048,7 +982,7 @@ garden<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n63">
+    <node id="n59">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="80.0" x="1301.0" y="1100.2811671087534"/>
@@ -1065,10 +999,10 @@ garden<y:LabelModel>
         </y:GenericNode>
       </data>
     </node>
-    <node id="n64">
+    <node id="n60">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="40.0" width="80.0" x="-129.0" y="164.4907161803713"/>
+          <y:Geometry height="40.0" width="80.0" x="-129.0" y="322.0"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="49.46875" x="15.265625" y="4.03125">Cow
@@ -1422,7 +1356,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e34" source="n17" target="n20">
+    <edge id="e34" source="n15" target="n19">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1432,7 +1366,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e35" source="n18" target="n20">
+    <edge id="e35" source="n16" target="n19">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1442,7 +1376,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e36" source="n15" target="n19">
+    <edge id="e36" source="n19" target="n11">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1452,7 +1386,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e37" source="n16" target="n19">
+    <edge id="e37" source="n10" target="n11">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1462,7 +1396,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e38" source="n20" target="n19">
+    <edge id="e38" source="n23" target="n26">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1472,7 +1406,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e39" source="n19" target="n11">
+    <edge id="e39" source="n24" target="n26">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1482,7 +1416,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e40" source="n10" target="n11">
+    <edge id="e40" source="n25" target="n26">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1492,7 +1426,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e41" source="n24" target="n27">
+    <edge id="e41" source="n22" target="n26">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1502,7 +1436,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e42" source="n25" target="n27">
+    <edge id="e42" source="n21" target="n26">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1512,7 +1446,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e43" source="n26" target="n27">
+    <edge id="e43" source="n27" target="n28">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1522,7 +1456,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e44" source="n23" target="n27">
+    <edge id="e44" source="n0" target="n27">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1532,7 +1466,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e45" source="n22" target="n27">
+    <edge id="e45" source="n1" target="n27">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1542,7 +1476,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e46" source="n21" target="n28">
+    <edge id="e46" source="n2" target="n27">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1552,47 +1486,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e47" source="n29" target="n30">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e48" source="n0" target="n29">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e49" source="n1" target="n29">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e50" source="n2" target="n29">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e51" source="n11" target="n31">
+    <edge id="e47" source="n11" target="n29">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1602,7 +1496,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e52" source="n32" target="n11">
+    <edge id="e48" source="n30" target="n11">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1612,7 +1506,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e53" source="n27" target="n33">
+    <edge id="e49" source="n26" target="n31">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1622,7 +1516,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e54" source="n27" target="n34">
+    <edge id="e50" source="n34" target="n32">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1632,7 +1526,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e55" source="n33" target="n35">
+    <edge id="e51" source="n33" target="n32">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1642,7 +1536,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e56" source="n34" target="n35">
+    <edge id="e52" source="n28" target="n32">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1652,7 +1546,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e57" source="n35" target="n36">
+    <edge id="e53" source="n32" target="n35">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1662,7 +1556,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e58" source="n28" target="n37">
+    <edge id="e54" source="n11" target="n35">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1672,7 +1566,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e59" source="n28" target="n38">
+    <edge id="e55" source="n32" target="n39">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1682,7 +1576,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e60" source="n38" target="n36">
+    <edge id="e56" source="n38" target="n36">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1692,7 +1586,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e61" source="n37" target="n36">
+    <edge id="e57" source="n3" target="n36">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1702,7 +1596,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e62" source="n30" target="n36">
+    <edge id="e58" source="n40" target="n37">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1712,7 +1606,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e63" source="n36" target="n39">
+    <edge id="e59" source="n0" target="n40">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1722,7 +1616,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e64" source="n11" target="n39">
+    <edge id="e60" source="n1" target="n40">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1732,7 +1626,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e65" source="n36" target="n43">
+    <edge id="e61" source="n2" target="n40">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1742,7 +1636,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e66" source="n42" target="n40">
+    <edge id="e62" source="n41" target="n42">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1752,7 +1646,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e67" source="n3" target="n40">
+    <edge id="e63" source="n43" target="n44">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1762,67 +1656,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e68" source="n44" target="n41">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e69" source="n0" target="n44">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e70" source="n1" target="n44">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e71" source="n2" target="n44">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e72" source="n45" target="n46">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e73" source="n47" target="n48">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e74" source="n49" target="n47">
+    <edge id="e64" source="n45" target="n43">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1832,7 +1666,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e75" source="n48" target="n49">
+    <edge id="e65" source="n44" target="n45">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1842,7 +1676,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e76" source="n51" target="n50">
+    <edge id="e66" source="n47" target="n46">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1852,7 +1686,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e77" source="n49" target="n51">
+    <edge id="e67" source="n45" target="n47">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1862,7 +1696,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e78" source="n52" target="n53">
+    <edge id="e68" source="n48" target="n49">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1872,7 +1706,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e79" source="n39" target="n58">
+    <edge id="e69" source="n35" target="n54">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1882,7 +1716,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e80" source="n54" target="n58">
+    <edge id="e70" source="n50" target="n54">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1892,7 +1726,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e81" source="n55" target="n58">
+    <edge id="e71" source="n51" target="n54">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1902,7 +1736,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e82" source="n56" target="n58">
+    <edge id="e72" source="n52" target="n54">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1912,7 +1746,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e83" source="n57" target="n58">
+    <edge id="e73" source="n53" target="n54">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1922,7 +1756,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e84" source="n59" target="n58">
+    <edge id="e74" source="n55" target="n54">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1932,7 +1766,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e85" source="n60" target="n58">
+    <edge id="e75" source="n56" target="n54">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1942,7 +1776,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e86" source="n40" target="n58">
+    <edge id="e76" source="n36" target="n54">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1952,7 +1786,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e87" source="n41" target="n58">
+    <edge id="e77" source="n37" target="n54">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1962,7 +1796,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e88" source="n43" target="n61">
+    <edge id="e78" source="n39" target="n57">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1972,7 +1806,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e89" source="n58" target="n61">
+    <edge id="e79" source="n54" target="n57">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1982,7 +1816,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e90" source="n53" target="n58">
+    <edge id="e80" source="n49" target="n54">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1992,7 +1826,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e91" source="n50" target="n58">
+    <edge id="e81" source="n46" target="n54">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2002,7 +1836,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e92" source="n49" target="n58">
+    <edge id="e82" source="n45" target="n54">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2012,7 +1846,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e93" source="n48" target="n58">
+    <edge id="e83" source="n44" target="n54">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2022,7 +1856,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e94" source="n58" target="n45">
+    <edge id="e84" source="n54" target="n41">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2032,7 +1866,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e95" source="n62" target="n58">
+    <edge id="e85" source="n58" target="n54">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2042,7 +1876,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e96" source="n36" target="n63">
+    <edge id="e86" source="n32" target="n59">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2052,7 +1886,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e97" source="n11" target="n63">
+    <edge id="e87" source="n11" target="n59">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2062,7 +1896,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e98" source="n58" target="n63">
+    <edge id="e88" source="n54" target="n59">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2072,7 +1906,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e99" source="n64" target="n20">
+    <edge id="e89" source="n0" target="n60">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2082,7 +1916,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e100" source="n0" target="n64">
+    <edge id="e90" source="n1" target="n60">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2092,7 +1926,7 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e101" source="n1" target="n64">
+    <edge id="e91" source="n2" target="n60">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -2102,7 +1936,87 @@ Pasture<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e102" source="n2" target="n64">
+    <edge id="e92" source="n20" target="n26">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e93" source="n26" target="n34">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e94" source="n26" target="n33">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e95" source="n26" target="n32">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
+            <y:Point x="1258.049071618037" y="573.0835543766578"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e96" source="n31" target="n32">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e97" source="n60" target="n19">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e98" source="n18" target="n19">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e99" source="n17" target="n19">
+      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>

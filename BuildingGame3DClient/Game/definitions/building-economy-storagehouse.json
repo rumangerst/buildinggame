@@ -22,7 +22,7 @@
     "economy/storagehouse" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
-            "reactions" : [ "storagehouse-fetch-wood", "storagehouse-fetch-stone" ],
+            "reactions" : [ "erosion-1", "storagehouse-fetch-wood", "storagehouse-fetch-stone" ],
             "neighbors" : { "meta/playerstartnode" : 0, "economy/tradepost" : 10 },
             "reaction-slots" : 3,
             "inventory-limits" : {},
@@ -34,7 +34,8 @@
                 "category" : "economy",
                 "buildable" : false
             },
-            "require-from-terrain" : { "solid-ground" : 1 }
+            "require-from-terrain" : { "solid-ground" : 1 },
+            "provides" : ["economy/storagehouse"]
         },    
     "economy/storagehouse/foundation" : {
             "type" : "building",

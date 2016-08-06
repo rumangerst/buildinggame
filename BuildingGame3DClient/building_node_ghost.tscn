@@ -1,12 +1,15 @@
 [gd_scene load_steps=3 format=1]
 
-[ext_resource path="res://building_node_ghost.gd" type="Script" id=1]
-[ext_resource path="res://Models/Parts/arrow.msh" type="Mesh" id=2]
+[ext_resource path="res://Models/Parts/arrow.msh" type="Mesh" id=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Spatial\n\nvar instance = null\nvar definition = null\nvar orientation = 0\n\nfunc _ready():\n\t\n\tset_fixed_process(true)\n\tset_process_input(true)\n\t\nfunc position_against(object):\n\tset_translation(object.get_translation() + Vector3(0, 0.25, 0))\n\nfunc build():\n\t\n\tif get_parent() == null:\n\t\treturn\n\t\n\tif definition != null:\n\t\tvar game_node = get_parent()\n\t\tvar pos = get_translation() / 2.0\n\t\tpos = Vector2(pos.x, pos.z)\n\t\t\t\t\n\t\tprint(\"Building now at \" + str(pos) + \" of \" + definition.get_id() )\n\t\tgame_node.build(pos, orientation, definition.get_id(), 1)\n\t\t\n\tself.queue_free()\n\t\nfunc _fixed_process(delta):\n\t\n\t# update the rotation\n\tset_rotation_deg(Vector3(0, orientation * 90, 0))\n\t\n\t# the position must be updated\n\tvar camera = get_tree().get_root().get_node(\"world/Camera\")\n\t\n\tif camera != null:\n\t\tvar current_pick = camera.current_pick\n\t\t\n\t\tif not current_pick.empty():\n\t\t\tvar obj = current_pick[\"collider\"]\n\t\t\t\n\t\t\tif obj != null:\n\t\t\t\tobj = obj.get_parent()\n\t\t\t\n\t\t\tif obj != null and obj != instance: \n\t\t\t\tposition_against(obj)\n\t\n\nfunc input_event(event):\n\t\n\tif event.type == InputEvent.MOUSE_BUTTON and not event.is_pressed():\n\t\t\n\t\tif event.button_index == BUTTON_LEFT:\n\t\t\tbuild()\n\t\telif event.button_index == BUTTON_RIGHT and get_parent() != null:\n\t\t\tget_parent().remove_child(self)\n\t\n\t\t\t\nfunc _input(event):\n\t\n\tif event.type == InputEvent.KEY and not event.is_pressed():\n\t\t\n\t\tif event.scancode == KEY_SPACE:\n\t\t\torientation = (orientation + 1) % 4\n\n#Sets the building type that should be represented by this ghost\nfunc set_definition(definition):\n\t\n\tself.definition = definition\t\n\tinstance = definition.get_first_scene().instance()\n\t\n\t#instance.set_ghost()\n\t\n\tadd_child(instance)\n\t"
 
 [node name="node" type="Spatial"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-script/script = ExtResource( 1 )
+script/script = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 
@@ -26,7 +29,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 

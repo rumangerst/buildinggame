@@ -17,7 +17,7 @@
     "%CATEGORY/%TYPE" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
-            "reactions" : [],
+            "reactions" : [ "erosion-1" ],
             "neighbors" : {},
             "reaction-slots" : 1,
             "inventory-limits" : {},
@@ -29,7 +29,8 @@
                 "category" : "%CATEGORY",
                 "buildable" : false
             },
-            "require-from-terrain" : { "solid-ground" : 1 }
+            "require-from-terrain" : { "solid-ground" : 1 },
+            "provides" : []
         },    
     "%CATEGORY/%TYPE/foundation" : {
             "type" : "building",

@@ -89,7 +89,7 @@
             "on" : [ "terrain/fresh-water", "terrain/saline-water"],
             "probability" : 1
         },
-        "environment/seaurchins" : {
+        "environment/sea-urchins" : {
             "priority" : 0,
             "generator" : { "frequency" : 0.8, "octaves" : 3, "seed" : "fish" },
             "at" : [-8,-9,-10],

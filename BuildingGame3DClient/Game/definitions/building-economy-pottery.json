@@ -1,0 +1,52 @@
+{
+    "resources" : {
+    
+    },
+
+    "reactions" : {
+    
+        "pottery-foundation-build-progress" : { "reactants" : { "worktime" : 10, "wood" : 5, "stone" : 2 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
+        "pottery-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/pottery" }, "duration" : 1, "require" : {} }
+    },
+    
+    "reaction-sets" : {
+        "pottery-foundation-build" : { "reactions" : ["pottery-foundation-build-progress", "pottery-foundation-build"], "type" : "default", "client" : { "name" : "Building Pottery" } }
+    },
+
+    "buildings" : {
+    "economy/pottery" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ "erosion-1" ],
+            "neighbors" : { "economy/storagehouse" : 100, "economy/mine" : 100 },
+            "reaction-slots" : 1,
+            "inventory-limits" : {},
+            "inventory" : {},
+            "client" : {
+                "scenes" : { "Pottery" : "res://Tiles/Misc/Generic.tscn" },
+                "name" : "Pottery",
+                "description" : "Makes amphoras and other ceramics",
+                "category" : "economy",
+                "buildable" : false
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        },    
+    "economy/pottery/foundation" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : ["pottery-foundation-build"],
+            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "public/house" : 20 },
+            "reaction-slots" : 1,
+            "inventory-limits" : { "building-progress": 100 },
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Foundation.tscn",
+                "name" : "Pottery",
+                "description" : "Makes amphoras and other ceramics",
+                "category" : "economy",
+                "buildable" : true
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        }    
+    }
+}

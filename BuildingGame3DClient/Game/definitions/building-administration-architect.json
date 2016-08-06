@@ -1,0 +1,59 @@
+{
+    "resources" : {
+    
+        "erosion" : { "client" : { "name" : "Erosion" } }
+    
+    },
+
+    "reactions" : {
+    
+        "architect-foundation-build-progress" : { "reactants" : { "wood" : 10, "worktime" : 15 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
+        "architect-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "administration/architect" }, "duration" : 1, "require" : {} },
+        
+        "erosion-1" : { "reactants" : {}, "products" : { "add" : { "erosion" : 1 } }, "duration" : 15, "require" : {} },
+        "erosion-destroy" : { "reactants" : { "erosion" : 100 }, "products" : {}, "transmute" : { "building-type" : "environment/ruins" }, "duration" : 1 }
+    },
+    
+    "reaction-sets" : {
+        "architect-foundation-build" : { "reactions" : ["architect-foundation-build-progress", "architect-foundation-build"], "type" : "default", "client" : { "name" : "Building Architect" } },
+        "erosion-1" : { "reactions" : [ "erosion-1", "erosion-destroy" ], "type" :  "mandatory", "client" : { "name" : "Erosion" } }
+    },
+
+    "buildings" : {
+    "administration/architect" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ "erosion-1" ],
+            "neighbors" : { "erosion/wood" : 20, "erosion/stone" : 20, "erosion/bricks" : 20, "erosion/loam" : 20, "erosion/marble" : 20, "economy/storagehouse" : 100 },
+            "reaction-slots" : 1,
+            "inventory-limits" : {},
+            "inventory" : {},
+            "client" : {
+                "scenes" : { "Architect" : "res://Tiles/Misc/Generic.tscn" },
+                "name" : "Architect",
+                "description" : "Repairs buildings",
+                "category" : "administration",
+                "buildable" : false
+            },
+            "require-from-terrain" : { "solid-ground" : 1 },
+            "provides" : []
+        },    
+    "administration/architect/foundation" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : ["architect-foundation-build"],
+            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "public/house" : 20 },
+            "reaction-slots" : 1,
+            "inventory-limits" : { "building-progress": 100 },
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Foundation.tscn",
+                "name" : "Architect",
+                "description" : "Repairs buildings",
+                "category" : "administration",
+                "buildable" : true
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        }    
+    }
+}

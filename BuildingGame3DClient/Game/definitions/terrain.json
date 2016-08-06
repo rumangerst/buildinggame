@@ -74,7 +74,7 @@
             "neighbors" : {},
             "reaction-slots" : 1,
             "inventory-limits" : { "fresh-water" : 100 },
-            "inventory" : { "fresh-water" : 100 },
+            "inventory" : { "water-ground" : 1, "fresh-water" : 100 },
             "client" : {
                 "name" : "Fresh water",
                 "description" : "Fresh and clean water that is drinkable",
@@ -89,7 +89,7 @@
             "reactions" : [ "terrain-saline-water" ],
             "neighbors" : {},
             "reaction-slots" : 1,
-            "inventory-limits" : { "saline-water" : 100 },
+            "inventory-limits" : { "water-ground" : 1, "saline-water" : 100 },
             "inventory" : { "saline-water" : 100 },
             "client" : {
                 "name" : "Saline water",
