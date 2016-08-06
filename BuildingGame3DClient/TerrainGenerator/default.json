@@ -82,6 +82,20 @@
             "on" : [ "terrain/grass", "terrain/meadow", "terrain/fertile-meadow", "terrain/stone" ],
             "probability" : 1
         },
+        "environment/fish" : {
+            "priority" : 0,
+            "generator" : { "frequency" : 0.8, "octaves" : 3, "seed" : "fish" },
+            "at" : [8,9,10],
+            "on" : [ "terrain/fresh-water", "terrain/saline-water"],
+            "probability" : 1
+        },
+        "environment/seaurchins" : {
+            "priority" : 0,
+            "generator" : { "frequency" : 0.8, "octaves" : 3, "seed" : "fish" },
+            "at" : [-8,-9,-10],
+            "on" : ["terrain/saline-water"],
+            "probability" : 1
+        },
         "environment/copper-ore" : {
             "priority" : 0,
             "generator" : { "frequency" : 0.1, "octaves" : 3, "seed" : "ore" },

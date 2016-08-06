@@ -30,6 +30,7 @@
             "client" : {
                 "scene" : "res://Tiles/Misc/Generic.tscn",
                 "name" : "Storage house",
+                "description" : "Allows storage of different materials",
                 "category" : "economy",
                 "buildable" : false
             },
@@ -46,6 +47,7 @@
             "client" : {
                 "scene" : "res://Tiles/Foundation.tscn",
                 "name" : "Storage house",
+                "description" : "Allows storage of different materials",
                 "category" : "economy",
                 "buildable" : true
             },

@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Control\n\nvar current_buildingtype = null\n\nfunc _ready():\n\tpass\n\t\nfunc set_data(buildingtype):\n\t\n\tcurrent_buildingtype = buildingtype\n\tget_node(\"BuildingName\").set_text(buildingtype.get_building_type_name())\n\tget_node(\"BuildingDescription\").set_text(buildingtype.get_building_type_description())\n\nfunc _on_Control_pressed():\n\t\n\tif current_buildingtype != null:\n\t\tvar game_node = get_tree().get_root().get_node(\"world/BuildingGameClient\")\n\t\tgame_node.build_mode(current_buildingtype)"
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 1 )
+light_color = Color( 0.8, 0.8, 0.8, 1 )
+dark_color = Color( 0.8, 0.8, 0.8, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
+
+[node name="Control" type="Button"]
+
+anchor/right = 1
+anchor/bottom = 1
+rect/min_size = Vector2( 0, 60 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 4.0
+margin/bottom = 708.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+script/script = SubResource( 1 )
+
+[node name="Icon" type="Panel" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 10.0
+margin/top = 10.0
+margin/right = 50.0
+margin/bottom = 50.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="BuildingName" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 60.0
+margin/top = 10.0
+margin/right = 1010.0
+margin/bottom = 24.0
+text = "Building name"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="BuildingDescription" type="Label" parent="."]
+
+anchor/right = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 60.0
+margin/top = 30.0
+margin/right = 10.0
+margin/bottom = 44.0
+text = "Description"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="pressed" from="." to="." method="_on_Control_pressed"]
+
+

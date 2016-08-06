@@ -32,6 +32,7 @@
             "client" : {
                 "scene" : "res://Tiles/Misc/Generic.tscn",
                 "name" : "Palace",
+                "description" : "Your residence",
                 "category" : "administration",
                 "buildable" : false
             },
@@ -48,6 +49,7 @@
             "client" : {
                 "scene" : "res://Tiles/Foundation.tscn",
                 "name" : "Palace",
+                "description" : "Your residence",
                 "category" : "administration",
                 "buildable" : true
             },

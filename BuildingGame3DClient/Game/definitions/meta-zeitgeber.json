@@ -57,6 +57,7 @@
             "client" : {
                 "scene" : "res://Tiles/Misc/Empty.tscn",
                 "name" : "Zeitgeber",
+                "description" : "Controls time cycle",
                 "category" : "meta",
                 "buildable" : false
             },

@@ -1,6 +1,7 @@
 #!/bin/env python
 
 name = input("Name: ")
+description = input("Description: ")
 typename = input("Typename: ")
 category = input("Category: ")
 
@@ -23,7 +24,7 @@ w = open("definitions/building-" + category + "-" + typename + ".json", "w")
 
 for line in f:
     
-    line = line.replace("%NAME", name).replace("%TYPE", typename).replace("%CATEGORY", category).replace("%PROGRESS_AMOUNT", progress).replace("%RESOURCES_PER_PROGRESS", ", ".join( [ "\"" + k + "\" : " + res_per_progress[k]  for k in res_per_progress ] ))
+    line = line.replace("%NAME", name).replace("%DESCR", description).replace("%TYPE", typename).replace("%CATEGORY", category).replace("%PROGRESS_AMOUNT", progress).replace("%RESOURCES_PER_PROGRESS", ", ".join( [ "\"" + k + "\" : " + res_per_progress[k]  for k in res_per_progress ] ))
     w.write(line)
 
 w.close()

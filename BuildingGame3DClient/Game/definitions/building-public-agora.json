@@ -1,0 +1,52 @@
+{
+    "resources" : {
+    
+    },
+
+    "reactions" : {
+    
+        "agora-foundation-build-progress" : { "reactants" : { "worktime" : 3, "wood" : 1, "money" : 20, "stone" : 2 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
+        "agora-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "public/agora" }, "duration" : 1, "require" : {} }
+    },
+    
+    "reaction-sets" : {
+        "agora-foundation-build" : { "reactions" : ["agora-foundation-build-progress", "agora-foundation-build"], "type" : "default", "client" : { "name" : "Building Agora" } }
+    },
+
+    "buildings" : {
+    "public/agora" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [],
+            "neighbors" : { "economy/silo" : 30 },
+            "reaction-slots" : 1,
+            "inventory-limits" : {},
+            "inventory" : {},
+            "client" : {
+                "scenes" : { "Agora" : "res://Tiles/Misc/Generic.tscn" },
+                "name" : "Agora",
+                "description" : "A marketplace where people can buy different goods",
+                "category" : "public",
+                "buildable" : false
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        },    
+    "public/agora/foundation" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : ["agora-foundation-build"],
+            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "public/house" : 20 },
+            "reaction-slots" : 1,
+            "inventory-limits" : { "building-progress": 100 },
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Foundation.tscn",
+                "name" : "Agora",
+                "description" : "A marketplace where people can buy different goods",
+                "category" : "public",
+                "buildable" : true
+            },
+            "require-from-terrain" : { "solid-ground" : 1 }
+        }    
+    }
+}

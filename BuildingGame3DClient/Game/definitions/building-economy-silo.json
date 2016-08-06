@@ -5,16 +5,16 @@
 
     "reactions" : {
     
-        "%TYPE-foundation-build-progress" : { "reactants" : { %RESOURCES_PER_PROGRESS }, "products" : { "add" : { "building-progress" : %PROGRESS_AMOUNT } }, "duration" : 1 },
-        "%TYPE-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "%CATEGORY/%TYPE" }, "duration" : 1, "require" : {} }
+        "silo-foundation-build-progress" : { "reactants" : { "worktime" : 5, "wood" : 2 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
+        "silo-foundation-build" : { "reactants" : { "building-progress" : 100, "amphora" : 16 }, "products" : {}, "transmute" : { "building-type" : "economy/silo" }, "duration" : 1, "require" : {} }
     },
     
     "reaction-sets" : {
-        "%TYPE-foundation-build" : { "reactions" : ["%TYPE-foundation-build-progress", "%TYPE-foundation-build"], "type" : "default", "client" : { "name" : "Building %NAME" } }
+        "silo-foundation-build" : { "reactions" : ["silo-foundation-build-progress", "silo-foundation-build"], "type" : "default", "client" : { "name" : "Building Silo" } }
     },
 
     "buildings" : {
-    "%CATEGORY/%TYPE" : {
+    "economy/silo" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
             "reactions" : [],
@@ -23,27 +23,27 @@
             "inventory-limits" : {},
             "inventory" : {},
             "client" : {
-                "scenes" : { "%NAME" : "res://Tiles/Misc/Generic.tscn" },
-                "name" : "%NAME",
-                "description" : "%DESCR",
-                "category" : "%CATEGORY",
+                "scenes" : { "Silo" : "res://Tiles/Misc/Generic.tscn" },
+                "name" : "Silo",
+                "description" : "Allows storage of different groceries",
+                "category" : "economy",
                 "buildable" : false
             },
             "require-from-terrain" : { "solid-ground" : 1 }
         },    
-    "%CATEGORY/%TYPE/foundation" : {
+    "economy/silo/foundation" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
-            "reactions" : ["%TYPE-foundation-build"],
+            "reactions" : ["silo-foundation-build"],
             "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "public/house" : 20 },
             "reaction-slots" : 1,
             "inventory-limits" : { "building-progress": 100 },
             "inventory" : {},
             "client" : {
                 "scene" : "res://Tiles/Foundation.tscn",
-                "name" : "%NAME",
-                "description" : "%DESCR",
-                "category" : "%CATEGORY",
+                "name" : "Silo",
+                "description" : "Allows storage of different groceries",
+                "category" : "economy",
                 "buildable" : true
             },
             "require-from-terrain" : { "solid-ground" : 1 }

@@ -28,17 +28,11 @@ func build_mode(building_type):
 	# create a new one
 	if building_type != null:
 		
-		print("Creating new building ghost of " + building_type)
+		print("Creating new building ghost of " + building_type.get_id())
 		
-		var definitions = get_client_definitions().get_building_types()
-		
-		if not building_type in definitions:
-			return
-			
-		var definition = definitions[building_type]		
 		var instance = load("building_node_ghost.tscn").instance()
 		instance.set_name("BuildingGhost")
-		instance.set_definition(definition)
+		instance.set_definition(building_type)
 		
 		# connect necessary events
 		get_tree().get_root().get_node("world/GUI").connect("non_ui_input", instance, "input_event")

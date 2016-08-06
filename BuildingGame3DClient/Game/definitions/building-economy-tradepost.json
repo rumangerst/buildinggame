@@ -9,20 +9,26 @@
         "tradepost-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/tradepost" }, "duration" : 1, "require" : {} },
         
         "tradepost-buy-wood" : { "reactants" : { "money" : 10 }, "products" : { "add" : { "wood" : 20 } }, "duration" : 5 },
-        "tradepost-buy-stone" : { "reactants" : { "money" : 20 }, "products" : { "add" : { "stone" : 10 } }, "duration" : 10 }
+        "tradepost-buy-stone" : { "reactants" : { "money" : 20 }, "products" : { "add" : { "stone" : 10 } }, "duration" : 10 },
+        "tradepost-buy-marble" : { "reactants" : { "money" : 20 }, "products" : { "add" : { "marble" : 5 } }, "duration" : 10 },
+        
+        "tradepost-buy-amphora" : { "reactants" : { "money" : 18 }, "products" : { "add" : { "amphora" : 6 } }, "duration" : 8 }
     },
     
     "reaction-sets" : {
         "tradepost-foundation-build" : { "reactions" : ["tradepost-foundation-build-progress", "tradepost-foundation-build"], "type" : "default", "client" : { "name" : "Building Trade post" } },
         "tradepost-buy-wood" : { "reactions" : ["tradepost-buy-wood"], "type" : "optional", "client" : { "name" : "Buy wood" } },
-        "tradepost-buy-stone" : { "reactions" : ["tradepost-buy-stone"], "type" : "optional", "client" : { "name" : "Buy stone" } }
+        "tradepost-buy-stone" : { "reactions" : ["tradepost-buy-stone"], "type" : "optional", "client" : { "name" : "Buy stone" } },
+        "tradepost-buy-marble" : { "reactions" : ["tradepost-buy-marble"], "type" : "optional", "client" : { "name" : "Buy marble" } },
+        
+        "tradepost-buy-amphora" : { "reactions" : ["tradepost-buy-amphora"], "type" : "optional", "client" : { "name" : "Buy amphoras" } }
     },
 
     "buildings" : {
     "economy/tradepost" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
-            "reactions" : [ "tradepost-buy-wood", "tradepost-buy-stone" ],
+            "reactions" : [ "tradepost-buy-wood", "tradepost-buy-stone", "tradepost-buy-marble", "tradepost-buy-amphora" ],
             "neighbors" : { "administration/palace" : 1000 },
             "reaction-slots" : 3,
             "inventory-limits" : {},
@@ -30,6 +36,7 @@
             "client" : {
                 "scene" : "res://Tiles/Misc/Generic.tscn",
                 "name" : "Trade post",
+                "description" : "Buys materials from traders",
                 "category" : "economy",
                 "buildable" : false
             },
@@ -46,8 +53,9 @@
             "client" : {
                 "scene" : "res://Tiles/Foundation.tscn",
                 "name" : "Trade post",
+                "description" : "Buys materials from traders",
                 "category" : "economy",
-                "buildable" : true
+                "buildable" : true                
             },
             "require-from-terrain" : { "solid-ground" : 1 }
         }    

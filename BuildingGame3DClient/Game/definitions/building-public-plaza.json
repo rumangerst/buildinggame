@@ -25,6 +25,7 @@
             "client" : {
                 "scene" : "res://Tiles/Public/Plaza.tscn",
                 "name" : "Plaza",
+                "description" : "An open place with some pavement",
                 "category" : "public",
                 "buildable" : false
             },
@@ -41,6 +42,7 @@
             "client" : {
                 "scene" : "res://Tiles/Foundation.tscn",
                 "name" : "Plaza",
+                "description" : "An open place with some pavement",
                 "category" : "public",
                 "buildable" : true
             },

@@ -10,6 +10,11 @@
         "money" : { "client" : { "name" : "Money" } },
         "worktime" : { "client" : { "name" : "Work time" } },
         
+        "amphora" : { "client" : { "name" : "Amphora" } },
+        
+        "fish" : { "client" : { "name" : "Fish" } },
+        "seaurchins" : { "client" : { "name" : "Sea urchins" } },
+        
         "silver-ore" : { "client" : { "name" : "Silver ore" } },
         "copper-ore" : { "client" : { "name" : "Copper ore" } },
         "tin-ore" : { "client" : { "name" : "Tin ore" } },

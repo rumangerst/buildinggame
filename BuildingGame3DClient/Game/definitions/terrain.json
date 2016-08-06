@@ -29,6 +29,7 @@
             "inventory" : { "solid-ground" : 1, "fertility" : 5 },
             "client" : {
                 "name" : "Grass",
+                "description" : "Solid ground that is a little fertile",
                 "scene" : "res://Tiles/Terrain/TerrainGrass.tscn",
                 "category" : "terrain",
                 "buildable" : true
@@ -44,6 +45,7 @@
             "inventory" : { "solid-ground" : 1, "fertility" : 10 },
             "client" : {
                 "name" : "Meadow",
+                "description" : "Solid ground that is fertile",
                 "scene" : "res://Tiles/Terrain/TerrainMeadow.tscn",
                 "category" : "terrain",
                 "buildable" : true
@@ -59,6 +61,7 @@
             "inventory" : { "solid-ground" : 1, "fertility" : 15 },
             "client" : {
                 "name" : "Fertile meadow",
+                "description" : "Solid ground that is very fertile",
                 "scene" : "res://Tiles/Terrain/TerrainFertileMeadow.tscn",
                 "category" : "terrain",
                 "buildable" : true
@@ -74,6 +77,7 @@
             "inventory" : { "fresh-water" : 100 },
             "client" : {
                 "name" : "Fresh water",
+                "description" : "Fresh and clean water that is drinkable",
                 "scene" : "res://Tiles/Terrain/TerrainWaterShallow.tscn",
                 "category" : "terrain",
                 "buildable" : true
@@ -89,6 +93,7 @@
             "inventory" : { "saline-water" : 100 },
             "client" : {
                 "name" : "Saline water",
+                "description" : "Salt can be extracted from this water",
                 "scene" : "res://Tiles/Terrain/TerrainWaterDeeper.tscn",
                 "category" : "terrain",
                 "buildable" : true
@@ -104,6 +109,7 @@
             "inventory" : { "solid-ground" : 1, "stone" : 250 },
             "client" : {
                 "name" : "Stone",
+                "description" : "Solid ground that contains usable stone",
                 "scene" : "res://Tiles/Terrain/TerrainStone.tscn",
                 "category" : "terrain",
                 "buildable" : true
@@ -119,6 +125,7 @@
             "inventory" : { "solid-ground" : 1, "clay" : 250 },
             "client" : {
                 "name" : "Clay",
+                "description" : "Solid groud that contains clay",
                 "scene" : "res://Tiles/Terrain/TerrainClay.tscn",
                 "category" : "terrain",
                 "buildable" : true
@@ -134,6 +141,7 @@
             "inventory" : { "solid-ground" : 1, "marble" : 250 },
             "client" : {
                 "name" : "Marble",
+                "description" : "Solid ground that contains marble",
                 "scene" : "res://Tiles/Terrain/TerrainMarble.tscn",
                 "category" : "terrain",
                 "buildable" : true

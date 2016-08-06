@@ -24,7 +24,40 @@
             "inventory" : { "tree" : 25 },
             "client" : {
                 "name" : "Forest",
+                "description" : "A source of trees",
                 "scene" : "res://Tiles/Environment/EnvironmentForest.tscn",
+                "category" : "environment",
+                "buildable" : true
+            }
+        },
+        "environment/fish" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ ],
+            "neighbors" : { },
+            "reaction-slots" : 1,
+            "inventory-limits" : { "fish" : 50 },
+            "inventory" : { "fish" : 50 },
+            "client" : {
+                "name" : "Fish",
+                "description" : "A swarm of fish",
+                "scene" : "res://Tiles/Environment/Fishes.tscn",
+                "category" : "environment",
+                "buildable" : true
+            }
+        },
+        "environment/seaurchins" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ ],
+            "neighbors" : { },
+            "reaction-slots" : 1,
+            "inventory-limits" : { "seaurchins" : 50 },
+            "inventory" : { "seaurchins" : 50 },
+            "client" : {
+                "name" : "Sea urchins",
+                "description" : "A colony of seau urchins",
+                "scene" : "res://Tiles/Environment/SeaUrchins.tscn",
                 "category" : "environment",
                 "buildable" : true
             }
@@ -39,6 +72,7 @@
             "inventory" : { "silver-ore" : 250 },
             "client" : {
                 "name" : "Silver Ore",
+                "description" : "Rocks that contain silver ore",
                 "scene" : "res://Tiles/Environment/EnvironmentSilver.tscn",
                 "category" : "environment",
                 "buildable" : true
@@ -54,6 +88,7 @@
             "inventory" : { "copper-ore" : 250 },
             "client" : {
                 "name" : "Copper Ore",
+                "description" : "Rocks that contain copper ore",
                 "scene" : "res://Tiles/Environment/EnvironmentCopper.tscn",
                 "category" : "environment",
                 "buildable" : true
@@ -69,6 +104,7 @@
             "inventory" : { "tin-ore" : 250 },
             "client" : {
                 "name" : "Tin Ore",
+                "description" : "Rocks that contain tin ore",
                 "scene" : "res://Tiles/Environment/EnvironmentTin.tscn",
                 "category" : "environment",
                 "buildable" : true

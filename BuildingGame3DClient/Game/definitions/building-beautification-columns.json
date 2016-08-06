@@ -25,6 +25,7 @@
             "client" : {
                 "scenes" : { "Columns" : "res://Tiles/Beautification/Columns.tscn" },
                 "name" : "Columns",
+                "description" : "Show the wealth and superiority of your city",
                 "category" : "beautification",
                 "buildable" : false
             },
@@ -41,6 +42,7 @@
             "client" : {
                 "scene" : "res://Tiles/Foundation.tscn",
                 "name" : "Columns",
+                "description" : "Show the wealth and superiority of your city",
                 "category" : "beautification",
                 "buildable" : true
             },

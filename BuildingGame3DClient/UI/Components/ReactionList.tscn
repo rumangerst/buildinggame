@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Control\n\nvar current_node = null\n\nfunc _ready():\n\tpass\n\nfunc set_data(node):\n\t\n\tcurrent_node = node\n\t\n\tfor i in range(get_node(\"ScrollContainer/Reactions\").get_child_count()):\n\t\tget_node(\"ScrollContainer/Reactions\").get_child(i).queue_free()\n\t\t\n\tget_node(\"ScrollContainer\").set_h_scroll(0)\n\tget_node(\"ScrollContainer\").set_v_scroll(0)\n\t\t\n\tif node != null and node.is_initialized():\t\t\n\t\tvar reaction_sets = node.get_node_type().get_reactions()\n\t\t\n\t\tget_node(\"ScrollContainer/Reactions\").set_custom_minimum_size(Vector2( get_size().x - 10, 70 *  reaction_sets.size()))\n\t\t\n\t\tfor i in range(reaction_sets.size()):\n\t\t\tvar control = load(\"res://UI/Components/ReactionSet.tscn\").instance()\n\t\t\tget_node(\"ScrollContainer/Reactions\").add_child(control)\n\t\t\t\n\t\t\tcontrol.set_data(node, reaction_sets[i])\n\t\t\n"
+
+[node name="Control" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1020.0
+margin/bottom = 770.0
+script/script = SubResource( 1 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+scroll/horizontal = false
+scroll/vertical = true
+
+[node name="Reactions" type="VBoxContainer" parent="ScrollContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+alignment = 0
+
+
