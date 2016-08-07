@@ -16,8 +16,8 @@
     
     "reaction-sets" : {
         "palace-pull-initial" : { "reactions" : ["palace-foundation-pull-money"], "type" : "mandatory", "client" : { "name" : "Fetch starter resources" } },
-        "palace-foundation-build" : { "reactions" : ["palace-foundation-build-progress", "palace-foundation-build"], "type" : "default", "client" : { "name" : "Building palace" } },
-        "palace-generate-worktime" : { "reactions" : ["palace-generate-worktime"], "type" : "optional", "client" : { "name" : "Pay servants to work" } }
+        "palace-foundation-build" : { "reactions" : ["palace-foundation-build-progress", "palace-foundation-build"], "type" : "default", "client" : { "name" : "Building palace", "icon" : "res://UI/Icons/Reactions/build.png" } },
+        "palace-generate-worktime" : { "reactions" : ["palace-generate-worktime"], "type" : "optional", "client" : { "name" : "Pay servants to work", "icon" : "res://UI/Icons/Reactions/produce-worktime.png" } }
     },
 
     "buildings" : {

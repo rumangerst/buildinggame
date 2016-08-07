@@ -15,8 +15,8 @@
     },
     
     "reaction-sets" : {
-        "architect-foundation-build" : { "reactions" : ["architect-foundation-build-progress", "architect-foundation-build"], "type" : "default", "client" : { "name" : "Building Architect" } },
-        "erosion-1" : { "reactions" : [ "erosion-1", "erosion-destroy" ], "type" :  "mandatory", "client" : { "name" : "Erosion" } }
+        "architect-foundation-build" : { "reactions" : ["architect-foundation-build-progress", "architect-foundation-build"], "type" : "default", "client" : { "name" : "Building Architect", "icon" : "res://UI/Icons/Reactions/build.png" } },
+        "erosion-1" : { "reactions" : [ "erosion-1", "erosion-destroy" ], "type" :  "mandatory", "client" : { "name" : "Erosion", "icon" : "res://UI/Icons/Reactions/erosion.png" } }
     },
 
     "buildings" : {

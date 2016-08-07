@@ -13,7 +13,7 @@
     },
     
     "reaction-sets" : {
-        "storagehouse-foundation-build" : { "reactions" : ["storagehouse-foundation-build-progress", "storagehouse-foundation-build"], "type" : "default", "client" : { "name" : "Building Storage house" } },
+        "storagehouse-foundation-build" : { "reactions" : ["storagehouse-foundation-build-progress", "storagehouse-foundation-build"], "type" : "default", "client" : { "name" : "Building Storage house", "icon" : "res://UI/Icons/Reactions/build.png" } },
         "storagehouse-fetch-wood" : { "reactions" : ["storagehouse-fetch-wood"], "type" : "optional", "client" : { "name" : "Fetch wood" } },
         "storagehouse-fetch-stone" : { "reactions" : ["storagehouse-fetch-stone"], "type" : "optional", "client" : { "name" : "Fetch stone" } }
     },

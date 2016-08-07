@@ -10,7 +10,7 @@
     },
     
     "reaction-sets" : {
-        "pottery-foundation-build" : { "reactions" : ["pottery-foundation-build-progress", "pottery-foundation-build"], "type" : "default", "client" : { "name" : "Building Pottery" } }
+        "pottery-foundation-build" : { "reactions" : ["pottery-foundation-build-progress", "pottery-foundation-build"], "type" : "default", "client" : { "name" : "Building Pottery", "icon" : "res://UI/Icons/Reactions/build.png" } }
     },
 
     "buildings" : {

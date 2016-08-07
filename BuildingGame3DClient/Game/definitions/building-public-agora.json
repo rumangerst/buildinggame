@@ -10,7 +10,7 @@
     },
     
     "reaction-sets" : {
-        "agora-foundation-build" : { "reactions" : ["agora-foundation-build-progress", "agora-foundation-build"], "type" : "default", "client" : { "name" : "Building Agora" } }
+        "agora-foundation-build" : { "reactions" : ["agora-foundation-build-progress", "agora-foundation-build"], "type" : "default", "client" : { "name" : "Building Agora", "icon" : "res://UI/Icons/Reactions/build.png" } }
     },
 
     "buildings" : {

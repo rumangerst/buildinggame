@@ -10,7 +10,7 @@
     },
     
     "reaction-sets" : {
-        "smeltery-foundation-build" : { "reactions" : ["smeltery-foundation-build-progress", "smeltery-foundation-build"], "type" : "default", "client" : { "name" : "Building Smeltery" } }
+        "smeltery-foundation-build" : { "reactions" : ["smeltery-foundation-build-progress", "smeltery-foundation-build"], "type" : "default", "client" : { "name" : "Building Smeltery", "icon" : "res://UI/Icons/Reactions/build.png" } }
     },
 
     "buildings" : {

@@ -10,7 +10,7 @@
     },
     
     "reaction-sets" : {
-        "woodcutter-foundation-build" : { "reactions" : ["woodcutter-foundation-build-progress", "woodcutter-foundation-build"], "type" : "default", "client" : { "name" : "Building Woodcutter" } }
+        "woodcutter-foundation-build" : { "reactions" : ["woodcutter-foundation-build-progress", "woodcutter-foundation-build"], "type" : "default", "client" : { "name" : "Building Woodcutter", "icon" : "res://UI/Icons/Reactions/build.png" } }
     },
 
     "buildings" : {

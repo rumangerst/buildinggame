@@ -10,7 +10,7 @@
     },
     
     "reaction-sets" : {
-        "columns-foundation-build" : { "reactions" : ["columns-foundation-build-progress", "columns-foundation-build"], "type" : "default", "client" : { "name" : "Building Columns" } }
+        "columns-foundation-build" : { "reactions" : ["columns-foundation-build-progress", "columns-foundation-build"], "type" : "default", "client" : { "name" : "Building Columns", "icon" : "res://UI/Icons/Reactions/build.png" } }
     },
 
     "buildings" : {

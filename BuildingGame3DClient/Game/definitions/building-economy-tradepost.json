@@ -16,7 +16,7 @@
     },
     
     "reaction-sets" : {
-        "tradepost-foundation-build" : { "reactions" : ["tradepost-foundation-build-progress", "tradepost-foundation-build"], "type" : "default", "client" : { "name" : "Building Trade post" } },
+        "tradepost-foundation-build" : { "reactions" : ["tradepost-foundation-build-progress", "tradepost-foundation-build"], "type" : "default", "client" : { "name" : "Building Trade post", "icon" : "res://UI/Icons/Reactions/build.png" } },
         "tradepost-buy-wood" : { "reactions" : ["tradepost-buy-wood"], "type" : "optional", "client" : { "name" : "Buy wood" } },
         "tradepost-buy-stone" : { "reactions" : ["tradepost-buy-stone"], "type" : "optional", "client" : { "name" : "Buy stone" } },
         "tradepost-buy-marble" : { "reactions" : ["tradepost-buy-marble"], "type" : "optional", "client" : { "name" : "Buy marble" } },

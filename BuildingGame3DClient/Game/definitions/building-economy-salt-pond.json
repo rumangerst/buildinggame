@@ -10,7 +10,7 @@
     },
     
     "reaction-sets" : {
-        "salt-pond-foundation-build" : { "reactions" : ["salt-pond-foundation-build-progress", "salt-pond-foundation-build"], "type" : "default", "client" : { "name" : "Building Salt pond" } }
+        "salt-pond-foundation-build" : { "reactions" : ["salt-pond-foundation-build-progress", "salt-pond-foundation-build"], "type" : "default", "client" : { "name" : "Building Salt pond", "icon" : "res://UI/Icons/Reactions/build.png" } }
     },
 
     "buildings" : {

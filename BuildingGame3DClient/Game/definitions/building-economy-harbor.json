@@ -14,7 +14,7 @@
     },
     
     "reaction-sets" : {
-        "harbor-foundation-build" : { "reactions" : ["harbor-foundation-build-progress", "harbor-foundation-build"], "type" : "default", "client" : { "name" : "Building Harbor" } },
+        "harbor-foundation-build" : { "reactions" : ["harbor-foundation-build-progress", "harbor-foundation-build"], "type" : "default", "client" : { "name" : "Building Harbor", "icon" : "res://UI/Icons/Reactions/build.png" } },
         
         "harbor-produce-fishing-boat" : { "reactions" : ["harbor-produce-fishing-boat"], "type" : "optional", "client" : { "name" : "Build fishing boat" } }
     },

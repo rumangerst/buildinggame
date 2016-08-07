@@ -14,7 +14,7 @@
     },
     
     "reaction-sets" : {
-        "silo-foundation-build" : { "reactions" : ["silo-foundation-build-progress", "silo-foundation-build"], "type" : "default", "client" : { "name" : "Building Silo" } },
+        "silo-foundation-build" : { "reactions" : ["silo-foundation-build-progress", "silo-foundation-build"], "type" : "default", "client" : { "name" : "Building Silo", "icon" : "res://UI/Icons/Reactions/build.png" } },
         
         "silo-fetch-fish" : { "reactions" : [ "silo-fetch-fish" ], "type" : "optional", "client" : { "name" : "Fetch fish" } },
         "silo-fetch-salted-fish" : { "reactions" : [ "silo-fetch-salted-fish" ], "type" : "optional", "client" : { "name" : "Fetch salted fish" } },

@@ -14,7 +14,7 @@
     },
     
     "reaction-sets" : {
-        "harbor-sea-urchin-quay-foundation-build" : { "reactions" : ["harbor-sea-urchin-quay-foundation-build-progress", "harbor-sea-urchin-quay-foundation-build"], "type" : "default", "client" : { "name" : "Building Sea urchin quay" } },        
+        "harbor-sea-urchin-quay-foundation-build" : { "reactions" : ["harbor-sea-urchin-quay-foundation-build-progress", "harbor-sea-urchin-quay-foundation-build"], "type" : "default", "client" : { "name" : "Building Sea urchin quay", "icon" : "res://UI/Icons/Reactions/build.png" } },        
         "harbor-sea-urchin-quay-fish" : { "reactions" : ["harbor-sea-urchin-quay-erode-boat", "harbor-sea-urchin-quay-fetch-boat", "harbor-sea-urchin-quay-fish"], "type" : "default", "client" : { "name" : "Dive for sea urchins" } }
     },
 

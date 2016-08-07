@@ -16,7 +16,7 @@
     },
     
     "reaction-sets" : {
-        "harbor-fishing-quay-foundation-build" : { "reactions" : ["harbor-fishing-quay-foundation-build-progress", "harbor-fishing-quay-foundation-build"], "type" : "default", "client" : { "name" : "Building Fishing quay" } },        
+        "harbor-fishing-quay-foundation-build" : { "reactions" : ["harbor-fishing-quay-foundation-build-progress", "harbor-fishing-quay-foundation-build"], "type" : "default", "client" : { "name" : "Building Fishing quay", "icon" : "res://UI/Icons/Reactions/build.png" } },        
         "harbor-fishing-quay-fish" : { "reactions" : ["harbor-fishing-quay-erode-boat", "harbor-fishing-quay-fetch-boat", "harbor-fishing-quay-fish"], "type" : "default", "client" : { "name" : "Harvest fishes" } },
         "harbor-fishing-quay-salt" : { "reactions" : ["harbor-fishing-quay-salt"], "type" : "optional", "client" : { "name" : "Salt fishes" } }
     },

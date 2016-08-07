@@ -10,7 +10,7 @@
     },
     
     "reaction-sets" : {
-        "plaza-foundation-build" : { "reactions" : ["plaza-foundation-build-progress", "plaza-foundation-build"], "type" : "default", "client" : { "name" : "Building plaza" } }
+        "plaza-foundation-build" : { "reactions" : ["plaza-foundation-build-progress", "plaza-foundation-build"], "type" : "default", "client" : { "name" : "Building plaza", "icon" : "res://UI/Icons/Reactions/build.png" } }
     },
 
     "buildings" : {

@@ -10,7 +10,7 @@
     },
     
     "reaction-sets" : {
-        "mine-foundation-build" : { "reactions" : ["mine-foundation-build-progress", "mine-foundation-build"], "type" : "default", "client" : { "name" : "Building Mine" } }
+        "mine-foundation-build" : { "reactions" : ["mine-foundation-build-progress", "mine-foundation-build"], "type" : "default", "client" : { "name" : "Building Mine", "icon" : "res://UI/Icons/Reactions/build.png" } }
     },
 
     "buildings" : {
