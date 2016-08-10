@@ -6,7 +6,7 @@
     "reactions" : {
     
         "smeltery-foundation-build-progress" : { "reactants" : { "stone" : 10, "worktime" : 10 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
-        "smeltery-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/smeltery" }, "duration" : 1, "require" : {} }
+        "smeltery-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/smeltery", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} }
     },
     
     "reaction-sets" : {

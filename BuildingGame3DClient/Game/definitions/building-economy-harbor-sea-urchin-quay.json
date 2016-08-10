@@ -6,7 +6,7 @@
     "reactions" : {
     
         "harbor-sea-urchin-quay-foundation-build-progress" : { "reactants" : { "worktime" : 20, "wood" : 10 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
-        "harbor-sea-urchin-quay-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/harbor-sea-urchin-quay" }, "duration" : 1, "require" : {} },
+        "harbor-sea-urchin-quay-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/harbor-sea-urchin-quay", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} },
         
         "harbor-sea-urchin-quay-fetch-boat" : { "reactants" : { "worktime" : 1, "fishing-boat" : 1}, "products" : { "add" : { "fishing-boat" : 1 } }, "duration" : 1, "sources" : ["economy/harbor"] },
         "harbor-sea-urchin-quay-erode-boat" : { "reactants" : { "fishing-boat" : 1}, "products" : { }, "duration" : 30, "sources" : ["economy/harbor-sea-urchin-quay"] },
@@ -28,9 +28,9 @@
             "inventory-limits" : { "fishing-boat" : 5, "food-sea-urchins" : 10 },
             "inventory" : {},
             "client" : {
-                "scenes" : { "Fishing quay" : "res://Tiles/Misc/Generic.tscn" },
-                "name" : "Fishing quay",
-                "description" : "Harvests fish",
+                "scenes" : { "Seq urchin quay" : "res://Tiles/Economy/GenericQuay.tscn" },
+                "name" : "Sea urchin quay",
+                "description" : "Harvests sea urchins",
                 "category" : "economy",
                 "buildable" : false
             },

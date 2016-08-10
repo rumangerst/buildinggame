@@ -4,7 +4,7 @@
 
 [sub_resource type="GDScript" id=1]
 
-script/source = "extends Control\n\nvar current_node = null\nvar current_reaction_set = null\n\nfunc _ready():\n\tset_process(true)\n\t\n\t#get_node(\"ToolTip\").hide()\n\t\nfunc make_reaction_plus():\n\tvar control = TextureFrame.new()\n\tcontrol.set_texture(load(\"res://UI/Icons/reaction-add.png\"))\n\t\n\treturn control\n\t\nfunc make_reaction_item_control(type, count):\n\tvar control = HBoxContainer.new()\n\tcontrol.set_h_size_flags(3)\n\tcontrol.set_v_size_flags(3)\n\t\n\tvar count_label = Label.new()\n\tcount_label.set_text(str(count))\n\tcontrol.add_child(count_label)\n\t\n\tvar icon = TextureFrame.new()\n\ticon.set_texture(load(type.get_resource_icon()))\n\ticon.set_stretch_mode(5)\n\ticon.set_size(Vector2(16, 16))\n\tcontrol.add_child(icon)\n\t\n\treturn control\n\t\nfunc update_reaction_list():\n\t\n\tvar reactions = current_reaction_set.get_reaction_set_reactions()\n\t\n\tfor reaction in reactions:\n\t\t\n\t\tvar lst = HBoxContainer.new()\n\t\tlst.set_h_size_flags(3)\n\t\tlst.set_v_size_flags(3)\n\t\t\n\t\tvar reactants = reaction.get_reactants()\n\t\t\n\t\tvar first = true\n\t\tfor k in reactants:\n\t\t\t\n\t\t\tif not first:\n\t\t\t\tlst.add_child(make_reaction_plus())\n\t\t\telse:\n\t\t\t\tfirst = false\n\t\t\t\n\t\t\tlst.add_child(make_reaction_item_control(k, reactants[k]))\n\t\t\n\t\tvar react_arrow = TextureFrame.new()\n\t\treact_arrow.set_texture(load(\"res://UI/Icons/reaction-react.png\"))\n\t\tlst.add_child(react_arrow)\n\t\t\n\t\tvar products_add = reaction.get_products_add()\n\t\t\n\t\tfirst = true\n\t\tfor k in products_add:\n\t\t\t\n\t\t\tif not first:\n\t\t\t\tlst.add_child(make_reaction_plus())\n\t\t\telse:\n\t\t\t\tfirst = false\n\t\t\t\n\t\t\tlst.add_child(make_reaction_item_control(k, products_add[k]))\n\t\t\t\n\t\tget_node(\"ToolTip/Reactions\").add_child(lst)\n\t\t\t\n\t\nfunc set_data(node, reaction):\n\t\n\tcurrent_node = node\n\tcurrent_reaction_set = reaction\n\t\n\tget_node(\"Icon\").set_texture(load(reaction.get_reaction_set_icon()))\n\tget_node(\"ToolTip/ReactionName\").set_text(reaction.get_reaction_set_name())\n\t\n\tupdate_reaction_list() \n\t\n\t# Don\'t ask me why the fucking control won\'t expand\n\t#get_node(\"ToolTip\").set_size(Vector2(500, 200))\n\tprint(get_node(\"ToolTip/Reactions\").get_size())\n\tget_node(\"ToolTip\").set_size(get_node(\"ToolTip/Reactions\").get_size() + Vector2(20, 70))\n\t\nfunc _process(delta):\n\t\n\tif is_visible() and current_node != null and current_reaction_set != null:\n\t\t\n\t\tvar progress = current_node.get_reaction_progress(current_reaction_set.get_id())\n\t\tget_node(\"ReactionProgress\").set_value(progress)\n\t\t\n\t\tvar activated = current_node.get_enabled_optional_reactions()\n\t\t\n\t\tif current_reaction_set.get_id() in activated or current_reaction_set.get_reaction_set_type() == \"mandatory\":\n\t\t\tget_node(\"ReactionProgress\").set_opacity(1)\n\t\telse:\n\t\t\tget_node(\"ReactionProgress\").set_opacity(0.5)\n\t\t\t\nfunc toggle_reaction():\n\t\n\tif current_reaction_set.get_reaction_set_type() == \"mandatory\":\n\t\treturn\n\t\n\tvar activated = current_node.get_enabled_optional_reactions()\n\t\n\tif current_reaction_set.get_id() in activated:\n\t\tcurrent_node.disable_optional_reaction(current_reaction_set.get_id())\n\telse:\n\t\tcurrent_node.enable_optional_reaction(current_reaction_set.get_id())\n\nfunc input_event(event):\n\t\n\tif event.type == InputEvent.MOUSE_BUTTON and not event.is_pressed():\t\t\n\t\tif event.button_index == BUTTON_LEFT:\n\t\t\ttoggle_reaction()\n\nfunc mouse_enter():\n\t\n\tprint(\"enter\")\n\t\n\tvar tt = get_node(\"ToolTip\")\n\ttt.set_global_pos(get_global_pos() - Vector2(0, tt.get_size().y))\t\n\ttt.show()\n\t\nfunc mouse_exit():\n\tget_node(\"ToolTip\").hide()\t\n"
+script/source = "extends Control\n\nvar current_node = null\nvar current_reaction_set = null\n\nfunc _ready():\n\tset_process(true)\n\t\n\t#get_node(\"ToolTip\").hide()\n\t\nfunc make_reaction_plus():\n\tvar control = TextureFrame.new()\n\tcontrol.set_texture(load(\"res://UI/Icons/reaction-add.png\"))\n\t\n\treturn control\t\n\n\t\nfunc update_reaction_list():\n\t\n\tvar reactions = current_reaction_set.get_reaction_set_reactions()\n\t\n\tfor reaction in reactions:\n\t\t\n\t\tvar lst = get_node(\"ToolTip/Reactions\")\n\t\tlst.set_h_size_flags(3)\n\t\tlst.set_v_size_flags(3)\n\t\t\n\t\tvar reactants = reaction.get_reactants()\n\t\t\n\t\tvar first = true\n\t\tfor k in reactants:\n\t\t\t\n\t\t\tif not first:\n\t\t\t\tlst.add_text(\" + \")\n\t\t\telse:\n\t\t\t\tfirst = false\n\t\t\t\n\t\t\tlst.add_text( str(reactants[k]) + \" \" + k.get_resource_name())\n\t\t\t\n\t\t\n\t\tlst.add_text(\" -> \")\n\t\t\n\t\tvar products_add = reaction.get_products_add()\n\t\t\n\t\tfirst = true\n\t\tfor k in products_add:\n\t\t\t\n\t\t\tif not first:\n\t\t\t\tlst.add_text(\" + \")\n\t\t\telse:\n\t\t\t\tfirst = false\n\t\t\t\n\t\t\tlst.add_text( str(products_add[k]) + \" \" + k.get_resource_name())\n\t\t\t\n\t\t# transmute\n\t\tvar transmute = reaction.get_transmute()\n\t\t\n\t\tif transmute != null:\n\t\t\t\n\t\t\tif not first:\n\t\t\t\tlst.add_text(\" + \")\n\t\t\tlst.add_text(transmute.get_building_type_name())\n\t\t\t\n\t\tlst.newline()\n\t\tlst.newline()\n\t\t\t\n\t\nfunc set_data(node, reaction):\n\t\n\tcurrent_node = node\n\tcurrent_reaction_set = reaction\n\t\n\tget_node(\"Icon\").set_texture(load(reaction.get_reaction_set_icon()))\n\tget_node(\"ToolTip/ReactionName\").set_text(reaction.get_reaction_set_name())\n\t\n\tupdate_reaction_list() \n\t\n\t# Don\'t ask me why the fucking control won\'t expand\n\t#get_node(\"ToolTip\").set_size(Vector2(500, 200))\n\t#print(get_node(\"ToolTip/Reactions\").get_size())\n\t#get_node(\"ToolTip\").set_size(get_node(\"ToolTip/Reactions\").get_size() + Vector2(20, 70))\n\t\nfunc _process(delta):\n\t\n\tif is_visible() and current_node != null and current_reaction_set != null:\n\t\t\n\t\tvar progress = current_node.get_reaction_progress(current_reaction_set.get_id())\n\t\tget_node(\"ReactionProgress\").set_value(progress)\n\t\t\n\t\tvar activated = current_node.get_enabled_optional_reactions()\n\t\t\n\t\tif current_reaction_set.get_id() in activated or current_reaction_set.get_reaction_set_type() == \"mandatory\":\n\t\t\tget_node(\"ReactionProgress\").set_opacity(1)\n\t\telse:\n\t\t\tget_node(\"ReactionProgress\").set_opacity(0.5)\n\t\t\t\n\telse:\n\t\t\n\t\tget_node(\"ToolTip\").hide()\n\t\t\n\t\t\t\nfunc toggle_reaction():\n\t\t\n\tif current_reaction_set.get_reaction_set_type() == \"mandatory\":\n\t\treturn\n\t\n\tvar activated = current_node.get_enabled_optional_reactions()\n\t\n\tif current_reaction_set.get_id() in activated:\n\t\tcurrent_node.disable_optional_reaction(current_reaction_set.get_id())\n\telse:\n\t\tcurrent_node.enable_optional_reaction(current_reaction_set.get_id())\n\nfunc input_event(event):\n\t\n\tif event.type == InputEvent.MOUSE_BUTTON and not event.is_pressed():\t\t\n\t\tif event.button_index == BUTTON_LEFT:\n\t\t\ttoggle_reaction()\n\nfunc mouse_enter():\n\t\n\tvar tt = get_node(\"ToolTip\")\n\ttt.set_global_pos(get_global_pos() - Vector2(0, tt.get_size().y))\t\n\ttt.show()\n\t\nfunc mouse_exit():\n\tget_node(\"ToolTip\").hide()\t\n"
 
 [node name="Control" type="Control"]
 
@@ -58,13 +58,14 @@ stretch_mode = 5
 
 [node name="ToolTip" type="PopupPanel" parent="."]
 
+visibility/visible = false
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 3
 size_flags/vertical = 3
 margin/left = 0.0
-margin/top = -240.0
-margin/right = 150.0
+margin/top = -280.0
+margin/right = 360.0
 margin/bottom = 0.0
 popup/exclusive = false
 
@@ -96,7 +97,7 @@ margin/top = 30.0
 margin/right = 10.0
 margin/bottom = 34.0
 
-[node name="Reactions" type="VBoxContainer" parent="ToolTip"]
+[node name="Reactions" type="RichTextLabel" parent="ToolTip"]
 
 anchor/right = 1
 anchor/bottom = 1
@@ -108,7 +109,9 @@ margin/left = 10.0
 margin/top = 40.0
 margin/right = 8.0
 margin/bottom = 8.0
-alignment = 0
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
 
 [connection signal="input_event" from="." to="." method="input_event"]
 

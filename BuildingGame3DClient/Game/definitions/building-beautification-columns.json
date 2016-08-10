@@ -6,7 +6,7 @@
     "reactions" : {
     
         "columns-foundation-build-progress" : { "reactants" : { "stone" : 5, "worktime" : 20, "marble" : 10 }, "products" : { "add" : { "building-progress" : 20 } }, "duration" : 1 },
-        "columns-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "beautification/columns" }, "duration" : 1, "require" : {} }
+        "columns-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "beautification/columns", "action" : { "set" : { "building-progress" : 0} } }, "duration" : 1, "require" : {} }
     },
     
     "reaction-sets" : {

@@ -8,10 +8,10 @@
     "reactions" : {
     
         "architect-foundation-build-progress" : { "reactants" : { "wood" : 10, "worktime" : 15 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
-        "architect-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "administration/architect" }, "duration" : 1, "require" : {} },
+        "architect-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "administration/architect", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} },
         
         "erosion-1" : { "reactants" : {}, "products" : { "add" : { "erosion" : 1 } }, "duration" : 15, "require" : {} },
-        "erosion-destroy" : { "reactants" : { "erosion" : 100 }, "products" : {}, "transmute" : { "building-type" : "environment/ruins" }, "duration" : 1 }
+        "erosion-destroy" : { "reactants" : { "erosion" : 100 }, "products" : {}, "transmute" : { "building-type" : "environment/ruins", "action" : { "set" : { "erosion" : 0} }  }, "duration" : 1 }
     },
     
     "reaction-sets" : {

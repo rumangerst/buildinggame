@@ -6,7 +6,7 @@
     "reactions" : {
     
         "silo-foundation-build-progress" : { "reactants" : { "worktime" : 5, "wood" : 2 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
-        "silo-foundation-build" : { "reactants" : { "building-progress" : 100}, "products" : {}, "transmute" : { "building-type" : "economy/silo" }, "duration" : 1, "require" : {} },
+        "silo-foundation-build" : { "reactants" : { "building-progress" : 100}, "products" : {}, "transmute" : { "building-type" : "economy/silo", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} },
         
         "silo-fetch-fish" : { "reactants" : { "worktime" : 1, "food-fish" : 5 }, "products" : { "add" : { "food-fish" : 4 } }, "duration" : 1 },
         "silo-fetch-salted-fish" : { "reactants" : { "worktime" : 1, "food-salted-fish" : 5 }, "products" : { "add" : { "food-salted-fish" : 5 } }, "duration" : 1 },

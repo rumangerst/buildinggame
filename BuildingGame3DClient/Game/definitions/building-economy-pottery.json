@@ -6,7 +6,7 @@
     "reactions" : {
     
         "pottery-foundation-build-progress" : { "reactants" : { "worktime" : 10, "wood" : 5, "stone" : 2 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
-        "pottery-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/pottery" }, "duration" : 1, "require" : {} }
+        "pottery-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/pottery", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} }
     },
     
     "reaction-sets" : {

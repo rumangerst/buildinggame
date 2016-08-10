@@ -6,7 +6,7 @@
     "reactions" : {
     
         "agora-foundation-build-progress" : { "reactants" : { "worktime" : 3, "wood" : 1, "money" : 20, "stone" : 2 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
-        "agora-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "public/agora" }, "duration" : 1, "require" : {} }
+        "agora-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "public/agora", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} }
     },
     
     "reaction-sets" : {

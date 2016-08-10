@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://Tiles/basic_tile.gd" type="Script" id=1]
-[ext_resource path="res://Models/Parts/pavement1.msh" type="Mesh" id=2]
+[ext_resource path="res://Models/Parts/pavement0.msh" type="Mesh" id=2]
 [ext_resource path="res://Models/Parts/column.msh" type="Mesh" id=3]
 [ext_resource path="res://Models/Parts/simpleroof0.msh" type="Mesh" id=4]
 

@@ -6,7 +6,7 @@
     "reactions" : {
     
         "storagehouse-foundation-build-progress" : { "reactants" : { "stone" : 1, "worktime" : 5, "wood" : 2, "money" : 10 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
-        "storagehouse-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/storagehouse" }, "duration" : 1, "require" : {} },
+        "storagehouse-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/storagehouse", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} },
         
         "storagehouse-fetch-wood" : { "reactants" : { "wood" : 1 }, "products" : { "add" : { "wood" : 1 } }, "duration" : 1, "sources" : [ "meta/playerstartnode", "economy/tradepost" ]},
         "storagehouse-fetch-stone" : { "reactants" : { "stone" : 1 }, "products" : { "add" : { "stone" : 1 } }, "duration" : 1, "sources" : [ "meta/playerstartnode", "economy/tradepost" ] }

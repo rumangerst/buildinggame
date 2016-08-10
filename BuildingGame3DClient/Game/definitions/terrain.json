@@ -89,8 +89,8 @@
             "reactions" : [ "terrain-saline-water" ],
             "neighbors" : {},
             "reaction-slots" : 1,
-            "inventory-limits" : { "water-ground" : 1, "saline-water" : 100 },
-            "inventory" : { "saline-water" : 100 },
+            "inventory-limits" : { "saline-water" : 100 },
+            "inventory" : { "saline-water" : 100, "water-ground" : 1 },
             "client" : {
                 "name" : "Saline water",
                 "description" : "Salt can be extracted from this water",

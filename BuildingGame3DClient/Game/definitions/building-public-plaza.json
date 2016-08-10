@@ -6,7 +6,7 @@
     "reactions" : {
     
         "plaza-foundation-build-progress" : { "reactants" : { "stone" : 2, "worktime" : 2, "money" : 20 }, "products" : { "add" : { "building-progress" : 10 } }, "duration" : 1 },
-        "plaza-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "public/plaza" }, "duration" : 1, "require" : {} }
+        "plaza-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "public/plaza", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} }
     },
     
     "reaction-sets" : {

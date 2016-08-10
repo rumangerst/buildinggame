@@ -6,7 +6,7 @@
     "reactions" : {
     
         "salt-pond-foundation-build-progress" : { "reactants" : { "worktime" : 3, "stone" : 1 }, "products" : { "add" : { "building-progress" : 1 } }, "duration" : 1 },
-        "salt-pond-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/salt-pond" }, "duration" : 1, "require" : {} }
+        "salt-pond-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/salt-pond", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} }
     },
     
     "reaction-sets" : {
@@ -23,7 +23,7 @@
             "inventory-limits" : {},
             "inventory" : {},
             "client" : {
-                "scenes" : { "Salt pond" : "res://Tiles/Misc/Generic.tscn" },
+                "scenes" : { "Salt pond" : "res://Tiles/Economy/SaltPond.tscn" },
                 "name" : "Salt pond",
                 "description" : "Extracts salt from saline water",
                 "category" : "economy",

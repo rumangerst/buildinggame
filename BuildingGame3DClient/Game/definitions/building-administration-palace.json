@@ -9,7 +9,7 @@
         "palace-foundation-pull-money" : { "reactants" : { "money" : 1000 }, "products" : { "add" : { "money" : 1000 }}, "duration" : 1, "require" : {}, "sources" : ["meta/playerstartnode"] },
         
         "palace-foundation-build-progress" : { "reactants" : { "wood" : 5, "stone" : 1, "worktime" : 10 }, "products" : { "add" : { "building-progress" : 10 } }, "duration" : 1, "require" : { "blueprint/administration/palace" : 1 } },
-        "palace-foundation-build" : { "reactants" : { "building-progress" : 100, "blueprint/administration/palace" : 1 }, "products" : {}, "transmute" : { "building-type" : "administration/palace" }, "duration" : 1, "require" : {} },
+        "palace-foundation-build" : { "reactants" : { "building-progress" : 100, "blueprint/administration/palace" : 1  }, "products" : {}, "transmute" : { "building-type" : "administration/palace", "action" : { "set" : { "building-progress" : 0} } }, "duration" : 1, "require" : {} },
         
         "palace-generate-worktime" : { "reactants" : { "money" : 5 }, "products" : { "add" : { "worktime" : 1 } }, "duration" : 1 }
     },
@@ -30,7 +30,7 @@
             "inventory-limits" : { "worktime" : 5 },
             "inventory" : {},
             "client" : {
-                "scene" : "res://Tiles/Misc/Generic.tscn",
+                "scene" : "res://Tiles/Administration/Palace-loam.tscn",
                 "name" : "Palace",
                 "description" : "Your residence",
                 "category" : "administration",

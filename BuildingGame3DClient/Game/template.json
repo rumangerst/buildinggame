@@ -6,7 +6,7 @@
     "reactions" : {
     
         "%TYPE-foundation-build-progress" : { "reactants" : { %RESOURCES_PER_PROGRESS }, "products" : { "add" : { "building-progress" : %PROGRESS_AMOUNT } }, "duration" : 1 },
-        "%TYPE-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "%CATEGORY/%TYPE" }, "duration" : 1, "require" : {} }
+        "%TYPE-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "%CATEGORY/%TYPE", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} }
     },
     
     "reaction-sets" : {

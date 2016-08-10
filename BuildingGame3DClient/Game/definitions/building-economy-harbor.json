@@ -8,7 +8,7 @@
     "reactions" : {
     
         "harbor-foundation-build-progress" : { "reactants" : { "worktime" : 20, "wood" : 10 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
-        "harbor-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/harbor" }, "duration" : 1, "require" : {} },
+        "harbor-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/harbor", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} },
         
         "harbor-produce-fishing-boat" : { "reactants" : { "worktime" : 2, "wood" : 4, "money" : 10 }, "products" : { "add" : { "fishing-boat" : 1 } }, "duration" : 2 }
     },
@@ -29,7 +29,7 @@
             "inventory-limits" : { "fishing-boat" : 5 },
             "inventory" : {},
             "client" : {
-                "scenes" : { "Harbor" : "res://Tiles/Misc/Generic.tscn" },
+                "scenes" : { "Harbor" : "res://Tiles/Economy/GenericQuay.tscn" },
                 "name" : "Harbor",
                 "description" : "Base for marine buildings",
                 "category" : "economy",

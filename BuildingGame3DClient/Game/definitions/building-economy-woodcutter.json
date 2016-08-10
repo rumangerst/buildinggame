@@ -6,7 +6,7 @@
     "reactions" : {
     
         "woodcutter-foundation-build-progress" : { "reactants" : { "wood" : 10, "worktime" : 10 }, "products" : { "add" : { "building-progress" : 10 } }, "duration" : 1 },
-        "woodcutter-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/woodcutter" }, "duration" : 1, "require" : {} }
+        "woodcutter-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/woodcutter", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} }
     },
     
     "reaction-sets" : {

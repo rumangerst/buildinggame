@@ -6,7 +6,7 @@
     "reactions" : {
     
         "harbor-fishing-quay-foundation-build-progress" : { "reactants" : { "worktime" : 20, "wood" : 10 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
-        "harbor-fishing-quay-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/harbor-fishing-quay" }, "duration" : 1, "require" : {} },
+        "harbor-fishing-quay-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/harbor-fishing-quay", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} },
         
         "harbor-fishing-quay-fetch-boat" : { "reactants" : { "worktime" : 1, "fishing-boat" : 1}, "products" : { "add" : { "fishing-boat" : 1 } }, "duration" : 1, "sources" : ["economy/harbor"] },
         "harbor-fishing-quay-erode-boat" : { "reactants" : { "fishing-boat" : 1}, "products" : { }, "duration" : 30, "sources" : ["economy/harbor-fishing-quay"] },
@@ -31,13 +31,13 @@
             "inventory-limits" : { "fishing-boat" : 5, "food-fish" : 10 },
             "inventory" : {},
             "client" : {
-                "scenes" : { "Fishing quay" : "res://Tiles/Misc/Generic.tscn" },
+                "scenes" : { "Fishing quay" : "res://Tiles/Economy/GenericQuay.tscn" },
                 "name" : "Fishing quay",
                 "description" : "Harvests fish",
                 "category" : "economy",
                 "buildable" : false
             },
-            "require-from-terrain" : { "solid-ground" : 1 }
+            "require-from-terrain" : { "water-ground" : 1 }
         },    
     "economy/harbor-fishing-quay/foundation" : {
             "type" : "building",
@@ -54,7 +54,7 @@
                 "category" : "economy",
                 "buildable" : true
             },
-            "require-from-terrain" : { "solid-ground" : 1 }
+            "require-from-terrain" : { "water-ground" : 1 }
         }    
     }
 }

@@ -6,7 +6,7 @@
     "reactions" : {
     
         "house-foundation-build-progress" : { "reactants" : { "stone" : 1, "wood" : 5, "worktime" : 5 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
-        "house-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "public/house" }, "duration" : 1, "require" : {} }
+        "house-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "public/house", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} }
     },
     
     "reaction-sets" : {

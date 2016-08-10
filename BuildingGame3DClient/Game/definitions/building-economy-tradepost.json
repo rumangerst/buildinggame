@@ -6,7 +6,7 @@
     "reactions" : {
     
         "tradepost-foundation-build-progress" : { "reactants" : { "worktime" : 2, "wood" : 2, "money" : 10 }, "products" : { "add" : { "building-progress" : 20 } }, "duration" : 1 },
-        "tradepost-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/tradepost" }, "duration" : 1, "require" : {} },
+        "tradepost-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/tradepost", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} },
         
         "tradepost-buy-wood" : { "reactants" : { "money" : 10 }, "products" : { "add" : { "wood" : 20 } }, "duration" : 5 },
         "tradepost-buy-stone" : { "reactants" : { "money" : 20 }, "products" : { "add" : { "stone" : 10 } }, "duration" : 10 },
