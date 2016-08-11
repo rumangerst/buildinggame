@@ -19,12 +19,19 @@
         "food-salted-fish" : { "client" : { "name" : "Salted fish" } },
         "food-sea-urchins" : { "client" : { "name" : "Sea urchins" } },
         
+        "sheep" : { "client" : { "name" : "Sheep" } },
+        "goat" : { "client" : { "name" : "Goat" } },
+        "cow" : { "client" : { "name" : "Cow" } },
+        "chicken" : { "client" : { "name" : "Chicken" } },
+        "duck" : { "client" : { "name" : "Duck" } },
+        
         "silver-ore" : { "client" : { "name" : "Silver ore" } },
         "copper-ore" : { "client" : { "name" : "Copper ore" } },
         "tin-ore" : { "client" : { "name" : "Tin ore" } },
         
         "stone" : { "client" : { "name" : "Stone" } },
         "clay" : { "client" : { "name" : "Clay" } },
+        "loam" : { "client" : { "name" : "Loam" } },
         "marble" : { "client" : { "name" : "Marble" } },
     
         "fertility" : { "client" : { "name" : "Fertility" } },

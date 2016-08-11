@@ -24,7 +24,7 @@
             "type" : "building",
             "max-neighbor-distance" : 0,
             "reactions" : [ "erosion-1", "harbor-produce-fishing-boat" ],
-            "neighbors" : { "economy/harbor-fishing-quay" : 2, "economy/harbor-sea-urchin-quay" : 2, "administration/palace" : 1000, "economy/storagehouse" : 100, "public/house" : 20 },
+            "neighbors" : { "economy/harbor-fishing-quay" : 2, "economy/harbor-sea-urchin-quay" : 2, "administration/palace" : 1000, "economy/storagehouse" : 100, "worktimesource" : 20 },
             "reaction-slots" : 1,
             "inventory-limits" : { "fishing-boat" : 5 },
             "inventory" : {},
@@ -35,13 +35,14 @@
                 "category" : "economy",
                 "buildable" : false
             },
-            "require-from-terrain" : { "water-ground" : 1 }
+            "require-from-terrain" : { "water-ground" : 1 },
+            "provides" : ["erosion/wood"]
         },    
     "economy/harbor/foundation" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
             "reactions" : ["harbor-foundation-build"],
-            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "public/house" : 20 },
+            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "worktimesource" : 20 },
             "reaction-slots" : 1,
             "inventory-limits" : { "building-progress": 100 },
             "inventory" : {},

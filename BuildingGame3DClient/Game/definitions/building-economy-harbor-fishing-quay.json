@@ -26,7 +26,7 @@
             "type" : "building",
             "max-neighbor-distance" : 0,
             "reactions" : [ "erosion-1", "harbor-fishing-quay-fish", "harbor-fishing-quay-salt" ],
-            "neighbors" : { "economy/harbor" : 2, "economy/storagehouse" : 100, "environment/fish" : 6, "public/house" : 20, "administration/palace" : 1000, "economy/salt-pond" : 100 },
+            "neighbors" : { "economy/harbor" : 2, "economy/storagehouse" : 100, "environment/fish" : 6, "worktimesource" : 20, "administration/palace" : 1000, "economy/salt-pond" : 100 },
             "reaction-slots" : 2,
             "inventory-limits" : { "fishing-boat" : 5, "food-fish" : 10 },
             "inventory" : {},
@@ -37,13 +37,14 @@
                 "category" : "economy",
                 "buildable" : false
             },
-            "require-from-terrain" : { "water-ground" : 1 }
+            "require-from-terrain" : { "water-ground" : 1 },
+            "provides" : ["erosion/wood"]
         },    
     "economy/harbor-fishing-quay/foundation" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
             "reactions" : ["harbor-fishing-quay-foundation-build"],
-            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "public/house" : 20 },
+            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "worktimesource" : 20 },
             "reaction-slots" : 1,
             "inventory-limits" : { "building-progress": 100 },
             "inventory" : {},

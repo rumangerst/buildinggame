@@ -40,13 +40,14 @@
                 "category" : "economy",
                 "buildable" : false
             },
-            "require-from-terrain" : { "solid-ground" : 1 }
+            "require-from-terrain" : { "solid-ground" : 1 },
+            "provides" : ["erosion/wood"]
         },    
     "economy/tradepost/foundation" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
             "reactions" : ["tradepost-foundation-build"],
-            "neighbors" : { "economy/storagehouse" : 100, "meta/playerstartnode" : 0, "administration/palace" : 1000, "public/house" : 20 },
+            "neighbors" : { "economy/storagehouse" : 100, "meta/playerstartnode" : 0, "administration/palace" : 1000, "worktimesource" : 20 },
             "reaction-slots" : 1,
             "inventory-limits" : { "building-progress": 100 },
             "inventory" : {},

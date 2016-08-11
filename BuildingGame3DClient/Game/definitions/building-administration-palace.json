@@ -37,7 +37,7 @@
                 "buildable" : false
             },
             "require-from-terrain" : { "solid-ground" : 1 },
-            "provides" : ["administration/palace"]
+            "provides" : ["erosion/loam", "worktimesource"]
         },    
     "administration/palace/foundation" : {
             "type" : "building",

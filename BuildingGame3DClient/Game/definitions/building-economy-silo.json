@@ -29,7 +29,7 @@
             "neighbors" : {
                 "economy/harbor-fishing-quay" : 100,
                 "economy/harbor-sea-urchin-quay" : 100,
-                "public/house" : 20
+                "worktimesource" : 20
             },
             "reaction-slots" : 2,
             "inventory-limits" : {},
@@ -42,13 +42,14 @@
                 "buildable" : false
             },
             "require-from-terrain" : { "solid-ground" : 1 },
-            "provides" : ["economy/silo"]
+            "provides" : ["economy/silo"],
+            "provides" : ["erosion/loam"]
         },    
     "economy/silo/foundation" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
             "reactions" : ["silo-foundation-build"],
-            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "public/house" : 20 },
+            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "worktimesource" : 20 },
             "reaction-slots" : 1,
             "inventory-limits" : { "building-progress": 100 },
             "inventory" : {},

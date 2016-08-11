@@ -36,7 +36,7 @@
             "type" : "building",
             "max-neighbor-distance" : 0,
             "reactions" : ["%TYPE-foundation-build"],
-            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "public/house" : 20 },
+            "neighbors" : { "economy/storagehouse" : 100, "administration/palace" : 1000, "worktimesource" : 20 },
             "reaction-slots" : 1,
             "inventory-limits" : { "building-progress": 100 },
             "inventory" : {},

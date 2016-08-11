@@ -10,23 +10,34 @@
         "architect-foundation-build-progress" : { "reactants" : { "wood" : 10, "worktime" : 15 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
         "architect-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "administration/architect", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} },
         
+        "erosion-0.5" : { "reactants" : {}, "products" : { "add" : { "erosion" : 1 } }, "duration" : 30, "require" : {} },
         "erosion-1" : { "reactants" : {}, "products" : { "add" : { "erosion" : 1 } }, "duration" : 15, "require" : {} },
-        "erosion-destroy" : { "reactants" : { "erosion" : 100 }, "products" : {}, "transmute" : { "building-type" : "environment/ruins", "action" : { "set" : { "erosion" : 0} }  }, "duration" : 1 }
+        "erosion-2" : { "reactants" : {}, "products" : { "add" : { "erosion" : 1 } }, "duration" : 8, "require" : {} },
+        "erosion-destroy" : { "reactants" : { "erosion" : 100 }, "products" : {}, "transmute" : { "building-type" : "environment/ruins", "action" : { "set" : { "erosion" : 0} }  }, "duration" : 1 },
+        
+        "architect-repair-wood" : { "reactants" : { "erosion" : 5, "worktime" : 1 }, "products" : {}, "duration" : 1, "sources" : ["erosion/wood", "worktimesource"] },
+        "architect-repair-loam" : { "reactants" : { "erosion" : 5, "worktime" : 1 }, "products" : {}, "duration" : 1, "sources" : ["erosion/loam", "worktimesource"] },
+        "architect-repair-stone" : { "reactants" : { "erosion" : 5, "worktime" : 1 }, "products" : {}, "duration" : 1, "sources" : ["erosion/stone", "worktimesource"] },
+        "architect-repair-marble" : { "reactants" : { "erosion" : 5, "worktime" : 1 }, "products" : {}, "duration" : 1, "sources" : ["erosion/marble", "worktimesource"] }
     },
     
     "reaction-sets" : {
         "architect-foundation-build" : { "reactions" : ["architect-foundation-build-progress", "architect-foundation-build"], "type" : "default", "client" : { "name" : "Building Architect", "icon" : "res://UI/Icons/Reactions/build.png" } },
-        "erosion-1" : { "reactions" : [ "erosion-1", "erosion-destroy" ], "type" :  "mandatory", "client" : { "name" : "Erosion", "icon" : "res://UI/Icons/Reactions/erosion.png" } }
+        "erosion-0.5" : { "reactions" : [ "erosion-0.5", "erosion-destroy" ], "type" :  "mandatory", "client" : { "name" : "Erosion", "icon" : "res://UI/Icons/Reactions/erosion.png" } },
+        "erosion-1" : { "reactions" : [ "erosion-1", "erosion-destroy" ], "type" :  "mandatory", "client" : { "name" : "Erosion", "icon" : "res://UI/Icons/Reactions/erosion.png" } },
+        "erosion-2" : { "reactions" : [ "erosion-2", "erosion-destroy" ], "type" :  "mandatory", "client" : { "name" : "Erosion", "icon" : "res://UI/Icons/Reactions/erosion.png" } },
+        
+        "architect-repair" : { "reactions" : [ "architect-repair-wood", "architect-repair-loam", "architect-repair-stone", "architect-repair-marble" ], "type" : "default", "client" : { "name" : "Repair buildings", "icon" : "res://UI/Icons/Reactions/build.png" } }
     },
 
     "buildings" : {
     "administration/architect" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
-            "reactions" : [ "erosion-1" ],
-            "neighbors" : { "erosion/wood" : 20, "erosion/stone" : 20, "erosion/bricks" : 20, "erosion/loam" : 20, "erosion/marble" : 20, "economy/storagehouse" : 100 },
+            "reactions" : [ "erosion-1", "architect-repair" ],
+            "neighbors" : { "erosion/wood" : 20, "erosion/stone" : 20, "erosion/loam" : 20, "erosion/marble" : 20, "economy/storagehouse" : 100, "worktimesource" : 20 },
             "reaction-slots" : 1,
-            "inventory-limits" : {},
+            "inventory-limits" : { "worktime" : 10 },
             "inventory" : {},
             "client" : {
                 "scenes" : { "Architect" : "res://Tiles/Misc/Generic.tscn" },
@@ -36,13 +47,13 @@
                 "buildable" : false
             },
             "require-from-terrain" : { "solid-ground" : 1 },
-            "provides" : []
+            "provides" : [ "erosion/loam" ]
         },    
     "administration/architect/foundation" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
             "reactions" : ["architect-foundation-build"],
-            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "public/house" : 20 },
+            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "worktimesource" : 20 },
             "reaction-slots" : 1,
             "inventory-limits" : { "building-progress": 100 },
             "inventory" : {},

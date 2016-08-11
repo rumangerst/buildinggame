@@ -20,7 +20,7 @@
             "neighbors" : {},
             "reaction-slots" : 1,
             "inventory-limits" : { },
-            "inventory" : { "money" : 100000, "worktime" : 10000, "wood" : 10000, "stone" : 10000, "marble" : 10000, "blueprint/administration/palace" : 1 },
+            "inventory" : { "money" : 100000, "worktime" : 10000, "wood" : 10000, "loam" : 10000, "stone" : 10000, "marble" : 10000, "blueprint/administration/palace" : 1 },
             "client" : {
                 "scene" : "res://Tiles/Misc/Empty.tscn",
                 "name" : "Player Start Node",
@@ -28,7 +28,8 @@
                 "category" : "meta",
                 "buildable" : false
             },
-            "require-from-terrain" : {  }
+            "require-from-terrain" : {  },
+            "provides" : [ "worktimesource", "storagehouse" ]
         }
     }    
     

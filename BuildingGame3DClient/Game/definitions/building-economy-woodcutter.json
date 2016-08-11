@@ -6,37 +6,40 @@
     "reactions" : {
     
         "woodcutter-foundation-build-progress" : { "reactants" : { "wood" : 10, "worktime" : 10 }, "products" : { "add" : { "building-progress" : 10 } }, "duration" : 1 },
-        "woodcutter-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/woodcutter", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} }
+        "woodcutter-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/woodcutter", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} },
+        
+        "woodcutter-cut-wood" : { "reactants" : {"worktime" : 1 }, "products" : { "add" : { "wood" : 5 } }, "duration" : 1 }
     },
     
     "reaction-sets" : {
-        "woodcutter-foundation-build" : { "reactions" : ["woodcutter-foundation-build-progress", "woodcutter-foundation-build"], "type" : "default", "client" : { "name" : "Building Woodcutter", "icon" : "res://UI/Icons/Reactions/build.png" } }
+        "woodcutter-foundation-build" : { "reactions" : ["woodcutter-foundation-build-progress", "woodcutter-foundation-build"], "type" : "default", "client" : { "name" : "Building Woodcutter", "icon" : "res://UI/Icons/Reactions/build.png" } },
+        "woodcutter-cut-wood" : { "reactions" : ["woodcutter-cut-wood"], "type" : "default", "client" : { "name" : "Cut wood" } }
     },
 
     "buildings" : {
     "economy/woodcutter" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
-            "reactions" : [ "erosion-1" ],
-            "neighbors" : { "environment/tree" : 5 },
+            "reactions" : [ "erosion-1", "woodcutter-cut-wood" ],
+            "neighbors" : { "environment/tree" : 5, "worktimesource" : 20 },
             "reaction-slots" : 1,
-            "inventory-limits" : {},
+            "inventory-limits" : { "wood" : 100 },
             "inventory" : {},
             "client" : {
-                "scenes" : { "Woodcutter" : "res://Tiles/Misc/Generic.tscn" },
+                "scenes" : { "Woodcutter" : "res://Tiles/Economy/Woodcutter.tscn" },
                 "name" : "Woodcutter",
                 "description" : "Harvests trees and produces wood",
                 "category" : "economy",
                 "buildable" : false
             },
             "require-from-terrain" : { "solid-ground" : 1 },
-            "provides" : []
+            "provides" : [ "erosion/wood" ]
         },    
     "economy/woodcutter/foundation" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
             "reactions" : ["woodcutter-foundation-build"],
-            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "public/house" : 20 },
+            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100, "administration/palace" : 1000, "worktimesource" : 20 },
             "reaction-slots" : 1,
             "inventory-limits" : { "building-progress": 100 },
             "inventory" : {},

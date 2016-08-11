@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://Tiles/basic_tile.gd" type="Script" id=1]
-[ext_resource path="res://Models/Parts/pavement0.msh" type="Mesh" id=2]
-[ext_resource path="res://Models/Parts/column.msh" type="Mesh" id=3]
+[ext_resource path="res://Models/Parts/column.msh" type="Mesh" id=2]
+[ext_resource path="res://Models/Parts/pavement0.msh" type="Mesh" id=3]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -41,10 +41,98 @@ _update_shape_index = 0
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="MeshInstance" type="MeshInstance" parent="StaticBody/Models"]
+[node name="Column1 2" type="MeshInstance" parent="StaticBody/Models"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0 )
+transform/local = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.3, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 2 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="Column3 2" type="MeshInstance" parent="StaticBody/Models"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 2 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="Column4 2" type="MeshInstance" parent="StaticBody/Models"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.7, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 2 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="Column5 2" type="MeshInstance" parent="StaticBody/Models"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.9, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 2 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="Column2 2" type="MeshInstance" parent="StaticBody/Models"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.1, 0, 0 )
 layers = 1
 geometry/visible = true
 geometry/material_override = null
@@ -66,7 +154,7 @@ material/0 = null
 [node name="Column1" type="MeshInstance" parent="StaticBody/Models"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0 )
+transform/local = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.7, 0, 0 )
 layers = 1
 geometry/visible = true
 geometry/material_override = null
@@ -81,13 +169,14 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 3 )
+mesh/mesh = ExtResource( 2 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
 [node name="Column3" type="MeshInstance" parent="StaticBody/Models"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, 0, 0 )
 layers = 1
 geometry/visible = true
 geometry/material_override = null
@@ -102,14 +191,14 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 3 )
+mesh/mesh = ExtResource( 2 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
 [node name="Column4" type="MeshInstance" parent="StaticBody/Models"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0 )
+transform/local = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.3, 0, 0 )
 layers = 1
 geometry/visible = true
 geometry/material_override = null
@@ -124,14 +213,14 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 3 )
+mesh/mesh = ExtResource( 2 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
 [node name="Column5" type="MeshInstance" parent="StaticBody/Models"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, 0 )
+transform/local = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.1, 0, 0 )
 layers = 1
 geometry/visible = true
 geometry/material_override = null
@@ -146,14 +235,36 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 3 )
+mesh/mesh = ExtResource( 2 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
 [node name="Column2" type="MeshInstance" parent="StaticBody/Models"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0, 0 )
+transform/local = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.9, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 2 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody/Models"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0 )
 layers = 1
 geometry/visible = true
 geometry/material_override = null

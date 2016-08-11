@@ -6,18 +6,21 @@
     "reactions" : {
     
         "house-foundation-build-progress" : { "reactants" : { "stone" : 1, "wood" : 5, "worktime" : 5 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
-        "house-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "public/house", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} }
+        "house-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "public/house", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} },
+        
+        "house-generate-worktime" : { "reactants" : {}, "products" : { "add" : { "worktime" : 6 } }, "duration" : 2 }
     },
     
     "reaction-sets" : {
-        "house-foundation-build" : { "reactions" : ["house-foundation-build-progress", "house-foundation-build"], "type" : "default", "client" : { "name" : "Building House", "icon" : "res://UI/Icons/Reactions/build.png" } }
+        "house-foundation-build" : { "reactions" : ["house-foundation-build-progress", "house-foundation-build"], "type" : "default", "client" : { "name" : "Building House", "icon" : "res://UI/Icons/Reactions/build.png" } },
+        "house-generate-worktime" : { "reactions" : ["house-generate-worktime"], "type" : "default", "client" : { "name" : "Go work" } }
     },
 
     "buildings" : {
     "public/house" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
-            "reactions" : [ "erosion-1" ],
+            "reactions" : [ "erosion-1", "house-generate-worktime" ],
             "neighbors" : { "public/agora" : 10 },
             "reaction-slots" : 1,
             "inventory-limits" : {},
@@ -29,13 +32,14 @@
                 "category" : "public",
                 "buildable" : false
             },
-            "require-from-terrain" : { "solid-ground" : 1 }
+            "require-from-terrain" : { "solid-ground" : 1 },
+            "provides" : ["erosion/wood", "worktimesource"]
         },    
     "public/house/foundation" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
             "reactions" : ["house-foundation-build"],
-            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100 , "administration/palace" : 1000, "public/house" : 20 },
+            "neighbors" : { "meta/playerstartnode" : 0, "economy/storagehouse" : 100 , "administration/palace" : 1000, "worktimesource" : 20 },
             "reaction-slots" : 1,
             "inventory-limits" : { "building-progress": 100 },
             "inventory" : {},
