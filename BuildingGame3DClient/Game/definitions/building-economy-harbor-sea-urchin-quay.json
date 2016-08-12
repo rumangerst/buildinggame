@@ -52,7 +52,9 @@
                 "category" : "economy",
                 "buildable" : true
             },
-            "require-from-terrain" : { "water-ground" : 1 }
+            "require-from-terrain" : { "water-ground" : 1 },
+            "require-connectivity" : false,
+            "is-connecting" : false
         }    
     }
 }

@@ -10,7 +10,7 @@
     },
     
     "reaction-sets" : {
-        "farm-foundation-build" : { "reactions" : ["farm-foundation-build-progress", "farm-foundation-build"], "type" : "default", "client" : { "name" : "Building Farm", "icon" : "res://Icons/Reactions/build.png" } }
+        "farm-foundation-build" : { "reactions" : ["farm-foundation-build-progress", "farm-foundation-build"], "type" : "default", "client" : { "name" : "Building Farm", "icon" : "res://UI/Icons/Reactions/build.png" } }
     },
 
     "buildings" : {
@@ -47,7 +47,9 @@
                 "category" : "economy",
                 "buildable" : true
             },
-            "require-from-terrain" : { "solid-ground" : 1 }
+            "require-from-terrain" : { "solid-ground" : 1 },
+            "require-connectivity" : false,
+            "is-connecting" : false
         }    
     }
 }

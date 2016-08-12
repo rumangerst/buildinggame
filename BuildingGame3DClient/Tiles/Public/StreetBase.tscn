@@ -1,0 +1,128 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://Models/Parts/pavement0.msh" type="Mesh" id=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Spatial\n\nvar current_node = null\n\nfunc _ready():\n\tpass\n\t\nfunc is_building(src, dst):\n\t\n\tif dst == null:\n\t\treturn false\n\t\t\n\treturn src.get_node_owner() == dst.get_node_owner()\n\t\nfunc set_node(node):\n\t\n\tcurrent_node = node\n\tnode.connect(\"node_initialized\", self, \"node_update\")\n\tnode.get_game_client().connect(\"node_added\", self, \"node_update\")\n\t\n\tupdate_street_connections()\n\t\nfunc node_update(nd):\n\tupdate_street_connections()\n\t\n\t\nfunc update_street_connections():\n\t\n\tprint(\"Update streets\")\n\t\n\tif current_node == null or not current_node.is_initialized():\n\t\treturn\n\t\n\tvar n = is_building(current_node, current_node.get_local_neighbor_n(1))\n\tvar s = is_building(current_node, current_node.get_local_neighbor_s(1))\n\tvar e = is_building(current_node, current_node.get_local_neighbor_e(1))\n\tvar w = is_building(current_node, current_node.get_local_neighbor_w(1))\n\t\n\tif n and s and e and w:\n\t\tget_node(\"Center\").set_scale(Vector3(1,1,1))\t\t\n\telse:\t\t\n\t\tget_node(\"North\").set_hidden(not n)\n\t\tget_node(\"South\").set_hidden(not s)\n\t\tget_node(\"East\").set_hidden(not e)\n\t\tget_node(\"West\").set_hidden(not w)\n\n\n"
+
+[node name="StreetBase" type="Spatial"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = SubResource( 1 )
+
+[node name="Center" type="MeshInstance" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.15, 0, 0, 0, 1, 0, 0, 0, 0.15, 0, 0.001, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 1 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="North" type="MeshInstance" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.15, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0.001, -0.5 )
+visibility/visible = false
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 1 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="South" type="MeshInstance" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.15, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0.001, 0.5 )
+visibility/visible = false
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 1 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="East" type="MeshInstance" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 0.15, 0.5, 0.001, 0 )
+visibility/visible = false
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 1 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="West" type="MeshInstance" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 0.15, -0.5, 0.001, 0 )
+visibility/visible = false
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 1 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+

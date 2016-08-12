@@ -8,23 +8,27 @@
         "storagehouse-foundation-build-progress" : { "reactants" : { "stone" : 1, "worktime" : 5, "wood" : 2, "money" : 10 }, "products" : { "add" : { "building-progress" : 5 } }, "duration" : 1 },
         "storagehouse-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/storagehouse", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} },
         
-        "storagehouse-fetch-wood" : { "reactants" : { "wood" : 1 }, "products" : { "add" : { "wood" : 1 } }, "duration" : 1, "sources" : [ "meta/playerstartnode", "economy/tradepost" ]},
-        "storagehouse-fetch-stone" : { "reactants" : { "stone" : 1 }, "products" : { "add" : { "stone" : 1 } }, "duration" : 1, "sources" : [ "meta/playerstartnode", "economy/tradepost" ] }
+        "storagehouse-fetch-wood" : { "reactants" : { "wood" : 5 }, "products" : { "add" : { "wood" : 5 } }, "duration" : 1, "sources" : [ "producer-wood" ]},
+        "storagehouse-fetch-stone" : { "reactants" : { "stone" : 5 }, "products" : { "add" : { "stone" : 5 } }, "duration" : 1, "sources" : [ "producer-stone" ] },
+        "storagehouse-fetch-loam" : { "reactants" : { "loam" : 5 }, "products" : { "add" : { "loam" : 5 } }, "duration" : 1, "sources" : [ "producer-loam" ] },
+        "storagehouse-fetch-marble" : { "reactants" : { "marble" : 5 }, "products" : { "add" : { "marble" : 5 } }, "duration" : 1, "sources" : [ "producer-marble" ] }
     },
     
     "reaction-sets" : {
         "storagehouse-foundation-build" : { "reactions" : ["storagehouse-foundation-build-progress", "storagehouse-foundation-build"], "type" : "default", "client" : { "name" : "Building Storage house", "icon" : "res://UI/Icons/Reactions/build.png" } },
         "storagehouse-fetch-wood" : { "reactions" : ["storagehouse-fetch-wood"], "type" : "optional", "client" : { "name" : "Fetch wood" } },
-        "storagehouse-fetch-stone" : { "reactions" : ["storagehouse-fetch-stone"], "type" : "optional", "client" : { "name" : "Fetch stone" } }
+        "storagehouse-fetch-stone" : { "reactions" : ["storagehouse-fetch-stone"], "type" : "optional", "client" : { "name" : "Fetch stone" } },
+        "storagehouse-fetch-loam" : { "reactions" : ["storagehouse-fetch-loam"], "type" : "optional", "client" : { "name" : "Fetch loam" } },
+        "storagehouse-fetch-marble" : { "reactions" : ["storagehouse-fetch-marble"], "type" : "optional", "client" : { "name" : "Fetch marble" } }
     },
 
     "buildings" : {
     "economy/storagehouse" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
-            "reactions" : [ "erosion-1", "storagehouse-fetch-wood", "storagehouse-fetch-stone" ],
-            "neighbors" : { "meta/playerstartnode" : 0, "economy/tradepost" : 10 },
-            "reaction-slots" : 3,
+            "reactions" : [ "erosion-1", "storagehouse-fetch-wood", "storagehouse-fetch-stone", "storagehouse-fetch-loam", "storagehouse-fetch-marble" ],
+            "neighbors" : { "producer-wood" : 10, "producer-loam" : 10, "producer-marble" : 10, "producer-stone" : 10 },
+            "reaction-slots" : 5,
             "inventory-limits" : {},
             "inventory" : {},
             "client" : {
@@ -35,8 +39,7 @@
                 "buildable" : false
             },
             "require-from-terrain" : { "solid-ground" : 1 },
-            "provides" : ["economy/storagehouse"],
-            "provides" : ["erosion/wood"]
+            "provides" : ["economy/storagehouse", "erosion/wood"]
         },    
     "economy/storagehouse/foundation" : {
             "type" : "building",
@@ -53,7 +56,9 @@
                 "category" : "economy",
                 "buildable" : true
             },
-            "require-from-terrain" : { "solid-ground" : 1 }
+            "require-from-terrain" : { "solid-ground" : 1 },
+            "require-connectivity" : false,
+            "is-connecting" : false
         }    
     }
 }

@@ -1,16 +1,19 @@
 [gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://Tiles/basic_tile.gd" type="Script" id=1]
-[ext_resource path="res://Models/Parts/tilted-soil.msh" type="Mesh" id=2]
+[ext_resource path="res://Models/Parts/tilted-soil.msh" type="Mesh" id=1]
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="GDScript" id=1]
+
+script/source = "\nextends ClientBuildingNode\n\n# member variables here, example:\n# var a=2\n# var b=\"textvar\"\n\nfunc _ready():\n\t# Called every time the node is added to the scene.\n\t# Initialization here\n\tpass\n\n\n"
+
+[sub_resource type="BoxShape" id=2]
 
 extents = Vector3( 1, 1, 1 )
 
 [node name="ClientBuildingNode" type="ClientBuildingNode"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-script/script = ExtResource( 1 )
+script/script = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
@@ -18,7 +21,7 @@ _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 input/ray_pickable = true
 input/capture_on_drag = false
 shape_count = 1
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -32,7 +35,7 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 
@@ -54,7 +57,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 

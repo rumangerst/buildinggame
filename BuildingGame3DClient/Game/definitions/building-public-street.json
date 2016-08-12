@@ -5,16 +5,16 @@
 
     "reactions" : {
     
-        "%TYPE-foundation-build-progress" : { "reactants" : { %RESOURCES_PER_PROGRESS }, "products" : { "add" : { "building-progress" : %PROGRESS_AMOUNT } }, "duration" : 1 },
-        "%TYPE-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "%CATEGORY/%TYPE", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} }
+        "street-foundation-build-progress" : { "reactants" : { "worktime" : 2, "stone" : 1 }, "products" : { "add" : { "building-progress" : 2.0 } }, "duration" : 1 },
+        "street-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "public/street", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} }
     },
     
     "reaction-sets" : {
-        "%TYPE-foundation-build" : { "reactions" : ["%TYPE-foundation-build-progress", "%TYPE-foundation-build"], "type" : "default", "client" : { "name" : "Building %NAME", "icon" : "res://UI/Icons/Reactions/build.png" } }
+        "street-foundation-build" : { "reactions" : ["street-foundation-build-progress", "street-foundation-build"], "type" : "default", "client" : { "name" : "Building Street", "icon" : "res://UI/Icons/Reactions/build.png" } }
     },
 
     "buildings" : {
-    "%CATEGORY/%TYPE" : {
+    "public/street" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
             "reactions" : [ "erosion-1" ],
@@ -23,28 +23,28 @@
             "inventory-limits" : {},
             "inventory" : {},
             "client" : {
-                "scenes" : { "%NAME" : "res://Tiles/Misc/Generic.tscn" },
-                "name" : "%NAME",
-                "description" : "%DESCR",
-                "category" : "%CATEGORY",
+                "scenes" : { "Street" : "res://Tiles/Public/Street.tscn" },
+                "name" : "Street",
+                "description" : "Connects buildings",
+                "category" : "public",
                 "buildable" : false
             },
             "require-from-terrain" : { "solid-ground" : 1 },
-            "provides" : ["%EROSION_T"]
+            "provides" : ["erosion/stone"]
         },    
-    "%CATEGORY/%TYPE/foundation" : {
+    "public/street/foundation" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
-            "reactions" : ["%TYPE-foundation-build"],
+            "reactions" : ["street-foundation-build"],
             "neighbors" : { "economy/storagehouse" : 100, "administration/palace" : 1000, "worktimesource" : 20 },
             "reaction-slots" : 1,
             "inventory-limits" : { "building-progress": 100 },
             "inventory" : {},
             "client" : {
                 "scene" : "res://Tiles/Foundation.tscn",
-                "name" : "%NAME",
-                "description" : "%DESCR",
-                "category" : "%CATEGORY",
+                "name" : "Street",
+                "description" : "Connects buildings",
+                "category" : "public",
                 "buildable" : true
             },
             "require-from-terrain" : { "solid-ground" : 1 },

@@ -29,7 +29,7 @@
                 "buildable" : false
             },
             "require-from-terrain" : {  },
-            "provides" : [ "worktimesource", "storagehouse" ]
+            "provides" : [ "worktimesource", "storagehouse", "producer-wood", "producer-loam", "producer-stone", "producer-marble" ]
         }
     }    
     

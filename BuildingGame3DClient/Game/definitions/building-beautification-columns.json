@@ -47,7 +47,9 @@
                 "category" : "beautification",
                 "buildable" : true
             },
-            "require-from-terrain" : { "solid-ground" : 1 }
+            "require-from-terrain" : { "solid-ground" : 1 },
+            "require-connectivity" : false,
+            "is-connecting" : false
         }    
     }
 }

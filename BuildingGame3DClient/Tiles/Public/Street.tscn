@@ -1,14 +1,19 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://Models/Parts/Scenes/Pasture.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tiles/Public/StreetBase.tscn" type="PackedScene" id=1]
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends ClientBuildingNode\n\nfunc _ready():\n\tpass\n\t\nfunc _node_initialized():\n\tget_node(\"StaticBody/StreetBase\").set_node(self)"
+
+[sub_resource type="BoxShape" id=2]
 
 extents = Vector3( 1, 1, 1 )
 
 [node name="ClientBuildingNode" type="ClientBuildingNode"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
@@ -16,7 +21,7 @@ _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 input/ray_pickable = true
 input/capture_on_drag = false
 shape_count = 1
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Transform( 1, 0, 0, 0, 0.05, 0, 0, 0, 1, 0, 0.05, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -30,14 +35,12 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( 1, 0, 0, 0, 0.05, 0, 0, 0, 1, 0, 0.05, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Models" type="Spatial" parent="StaticBody"]
+[node name="StreetBase" parent="StaticBody" instance=ExtResource( 1 )]
 
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
-[node name="Pasture" parent="StaticBody/Models" instance=ExtResource( 1 )]
+[connection signal="node_initialized" from="." to="." method="_node_initialized"]
 
 

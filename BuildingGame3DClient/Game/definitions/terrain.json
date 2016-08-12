@@ -122,7 +122,7 @@
             "neighbors" : {},
             "reaction-slots" : 1,
             "inventory-limits" : { },
-            "inventory" : { "solid-ground" : 1, "clay" : 250 },
+            "inventory" : { "solid-ground" : 1, "clay" : 100, "loam" : 300 },
             "client" : {
                 "name" : "Clay",
                 "description" : "Solid groud that contains clay",

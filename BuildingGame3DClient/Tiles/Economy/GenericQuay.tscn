@@ -1,16 +1,19 @@
 [gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://Tiles/basic_tile.gd" type="Script" id=1]
-[ext_resource path="res://Models/Parts/quay.msh" type="Mesh" id=2]
+[ext_resource path="res://Models/Parts/quay.msh" type="Mesh" id=1]
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="GDScript" id=1]
+
+script/source = "\nextends ClientBuildingNode\n\nfunc _ready():\n\tpass\n\t\nfunc is_water(node):\n\t\n\tif node == null:\n\t\treturn false\n\t\t\n\treturn node.get_node_type().get_id() == \"terrain/saline-water\" or node.get_node_type().get_id() == \"terrain/fresh-water\"\n\t\nfunc _on_node_initialized():\n\t\n\tvar n = is_water(get_local_neighbor_n(0))\n\tvar s = is_water(get_local_neighbor_s(0))\n\tvar e = is_water(get_local_neighbor_e(0))\n\tvar w = is_water(get_local_neighbor_w(0))\n\t\n\tif not n or not s or not e or not w:\n\t\t\n\t\tget_node(\"StaticBody/Models/North\").set_hidden(n)\n\t\tget_node(\"StaticBody/Models/South\").set_hidden(s)\n\t\tget_node(\"StaticBody/Models/East\").set_hidden(e)\n\t\tget_node(\"StaticBody/Models/West\").set_hidden(w)\n\t\t\n\n\n"
+
+[sub_resource type="BoxShape" id=2]
 
 extents = Vector3( 1, 1, 1 )
 
 [node name="ClientBuildingNode" type="ClientBuildingNode"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-script/script = ExtResource( 1 )
+script/script = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
@@ -18,7 +21,7 @@ _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 input/ray_pickable = true
 input/capture_on_drag = false
 shape_count = 1
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Transform( 1, 0, 0, 0, 0.05, 0, 0, 0, 1, 0, 0.05, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -32,7 +35,7 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( 1, 0, 0, 0, 0.05, 0, 0, 0, 1, 0, 0.05, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 
@@ -62,7 +65,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -84,7 +87,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -106,7 +109,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -128,7 +131,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -155,7 +158,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -177,7 +180,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -199,7 +202,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -221,7 +224,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -248,7 +251,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -270,7 +273,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -292,7 +295,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -314,7 +317,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -341,7 +344,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -363,7 +366,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -385,7 +388,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
@@ -407,7 +410,7 @@ geometry/depth_scale = false
 geometry/visible_in_all_rooms = false
 geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
-mesh/mesh = ExtResource( 2 )
+mesh/mesh = ExtResource( 1 )
 mesh/skeleton = NodePath("..")
 material/0 = null
 
