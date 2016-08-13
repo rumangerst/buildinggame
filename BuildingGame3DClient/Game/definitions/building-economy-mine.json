@@ -43,7 +43,7 @@
                 "buildable" : false
             },
             "require-from-terrain" : { "solid-ground" : 1 },
-            "provides" : ["erosion/wood"]
+            "provides" : ["erosion/wood", "producer-silver-ore", "producer-copper-ore", "producer-tin-ore"]
         },    
     "economy/mine-deep" : {
             "type" : "building",
@@ -70,7 +70,8 @@
                 "category" : "economy",
                 "buildable" : false
             },
-            "require-from-terrain" : { "solid-ground" : 1 }
+            "require-from-terrain" : { "solid-ground" : 1 },
+            "provides" : ["erosion/wood", "producer-silver-ore", "producer-copper-ore", "producer-tin-ore", "producer-stone", "producer-clay", "producer-loam", "producer-marble"]
         },    
     "economy/mine/foundation" : {
             "type" : "building",

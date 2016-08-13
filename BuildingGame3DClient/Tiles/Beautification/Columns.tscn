@@ -1,15 +1,21 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://Models/Parts/column.msh" type="Mesh" id=1]
 [ext_resource path="res://Models/Parts/pavement0.msh" type="Mesh" id=2]
+[ext_resource path="res://Tiles/Public/StreetBase.tscn" type="PackedScene" id=3]
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends ClientBuildingNode\n\nfunc _node_initialized():\n\tget_node(\"StaticBody/Models/StreetBase\").set_node(self)\n\nfunc _ready():\n\tpass\n"
+
+[sub_resource type="BoxShape" id=2]
 
 extents = Vector3( 1, 1, 1 )
 
 [node name="ClientBuildingNode" type="ClientBuildingNode"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
@@ -17,7 +23,7 @@ _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 input/ray_pickable = true
 input/capture_on_drag = false
 shape_count = 1
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.5, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -31,7 +37,7 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.5, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 
@@ -262,7 +268,7 @@ material/0 = null
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody/Models"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.4, 0, 0.001, 0 )
 layers = 1
 geometry/visible = true
 geometry/material_override = null
@@ -280,5 +286,9 @@ geometry/baked_light_tex_id = 0
 mesh/mesh = ExtResource( 2 )
 mesh/skeleton = NodePath("..")
 material/0 = null
+
+[node name="StreetBase" parent="StaticBody/Models" instance=ExtResource( 3 )]
+
+[connection signal="node_initialized" from="." to="." method="_node_initialized"]
 
 

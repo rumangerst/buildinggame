@@ -37,7 +37,7 @@ for k in res_:
 f = open("template.json", "r")
 w = open("definitions/building-" + category + "-" + typename + ".json", "w")
 
-progress = str(progress)
+progress = str(int(progress))
 
 for line in f:
     

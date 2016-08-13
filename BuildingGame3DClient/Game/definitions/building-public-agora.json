@@ -23,7 +23,7 @@
             "inventory-limits" : {},
             "inventory" : {},
             "client" : {
-                "scenes" : { "Agora" : "res://Tiles/Misc/Generic.tscn" },
+                "scenes" : { "Agora" : "res://Tiles/Public/Agora.tscn" },
                 "name" : "Agora",
                 "description" : "A marketplace where people can buy different goods",
                 "category" : "public",

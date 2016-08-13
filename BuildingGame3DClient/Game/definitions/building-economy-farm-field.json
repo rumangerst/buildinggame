@@ -1,0 +1,55 @@
+{
+    "resources" : {
+    
+    },
+
+    "reactions" : {
+    
+        "farm-field-foundation-build-progress" : { "reactants" : { "worktime" : 2 }, "products" : { "add" : { "building-progress" : 4 } }, "duration" : 1 },
+        "farm-field-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "economy/farm-field", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} }
+    },
+    
+    "reaction-sets" : {
+        "farm-field-foundation-build" : { "reactions" : ["farm-field-foundation-build-progress", "farm-field-foundation-build"], "type" : "default", "client" : { "name" : "Building Field", "icon" : "res://UI/Icons/Reactions/build.png" } }
+    },
+
+    "buildings" : {
+    "economy/farm-field" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : [ ],
+            "neighbors" : { "economy/farm" : 2 },
+            "reaction-slots" : 1,
+            "inventory-limits" : {},
+            "inventory" : {},
+            "client" : {
+                "scenes" : { "Field" : "res://Tiles/Misc/Generic.tscn" },
+                "name" : "Field",
+                "description" : "Allows farming of onions, carrots and wheat",
+                "category" : "economy",
+                "buildable" : false
+            },
+            "require-from-terrain" : { "solid-ground" : 1 },
+            "provides" : []
+        },    
+    "economy/farm-field/foundation" : {
+            "type" : "building",
+            "max-neighbor-distance" : 0,
+            "reactions" : ["farm-field-foundation-build"],
+            "neighbors" : { "economy/storagehouse" : 100, "administration/palace" : 1000, "worktimesource" : 20 },
+            "reaction-slots" : 1,
+            "inventory-limits" : { "building-progress": 100 },
+            "inventory" : {},
+            "client" : {
+                "scene" : "res://Tiles/Foundation.tscn",
+                "name" : "Field",
+                "description" : "Allows farming of onions, carrots and wheat",
+                "category" : "economy",
+                "buildable" : true
+            },
+            "require-from-terrain" : { "solid-ground" : 1 },
+            "require-connectivity" : false,
+            "is-connecting" : false
+        }    
+    }
+}

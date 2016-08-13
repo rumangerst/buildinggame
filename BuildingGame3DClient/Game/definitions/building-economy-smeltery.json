@@ -18,7 +18,7 @@
             "type" : "building",
             "max-neighbor-distance" : 0,
             "reactions" : [ "erosion-1" ],
-            "neighbors" : { "economy/mine" : 100, "economy/storagehouse" : 100 },
+            "neighbors" : { "producer-silver-ore" : 100, "producer-copper-ore" : 100, "producer-tin-ore" : 100, "economy/storagehouse" : 100, "worktimesource" : 20 },
             "reaction-slots" : 1,
             "inventory-limits" : {},
             "inventory" : {},

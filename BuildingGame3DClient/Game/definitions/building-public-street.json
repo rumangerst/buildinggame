@@ -5,7 +5,7 @@
 
     "reactions" : {
     
-        "street-foundation-build-progress" : { "reactants" : { "worktime" : 2, "stone" : 1 }, "products" : { "add" : { "building-progress" : 2.0 } }, "duration" : 1 },
+        "street-foundation-build-progress" : { "reactants" : { "worktime" : 2, "stone" : 1 }, "products" : { "add" : { "building-progress" : 2 } }, "duration" : 1 },
         "street-foundation-build" : { "reactants" : { "building-progress" : 100 }, "products" : {}, "transmute" : { "building-type" : "public/street", "action" : { "set" : { "building-progress" : 0} }  }, "duration" : 1, "require" : {} }
     },
     

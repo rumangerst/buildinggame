@@ -11,7 +11,8 @@
         "storagehouse-fetch-wood" : { "reactants" : { "wood" : 5 }, "products" : { "add" : { "wood" : 5 } }, "duration" : 1, "sources" : [ "producer-wood" ]},
         "storagehouse-fetch-stone" : { "reactants" : { "stone" : 5 }, "products" : { "add" : { "stone" : 5 } }, "duration" : 1, "sources" : [ "producer-stone" ] },
         "storagehouse-fetch-loam" : { "reactants" : { "loam" : 5 }, "products" : { "add" : { "loam" : 5 } }, "duration" : 1, "sources" : [ "producer-loam" ] },
-        "storagehouse-fetch-marble" : { "reactants" : { "marble" : 5 }, "products" : { "add" : { "marble" : 5 } }, "duration" : 1, "sources" : [ "producer-marble" ] }
+        "storagehouse-fetch-marble" : { "reactants" : { "marble" : 5 }, "products" : { "add" : { "marble" : 5 } }, "duration" : 1, "sources" : [ "producer-marble" ] },
+        "storagehouse-fetch-bricks" : { "reactants" : { "bricks" : 5 }, "products" : { "add" : { "bricks" : 5 } }, "duration" : 1, "sources" : [ "producer-bricks" ] }
     },
     
     "reaction-sets" : {
@@ -19,16 +20,17 @@
         "storagehouse-fetch-wood" : { "reactions" : ["storagehouse-fetch-wood"], "type" : "optional", "client" : { "name" : "Fetch wood" } },
         "storagehouse-fetch-stone" : { "reactions" : ["storagehouse-fetch-stone"], "type" : "optional", "client" : { "name" : "Fetch stone" } },
         "storagehouse-fetch-loam" : { "reactions" : ["storagehouse-fetch-loam"], "type" : "optional", "client" : { "name" : "Fetch loam" } },
-        "storagehouse-fetch-marble" : { "reactions" : ["storagehouse-fetch-marble"], "type" : "optional", "client" : { "name" : "Fetch marble" } }
+        "storagehouse-fetch-marble" : { "reactions" : ["storagehouse-fetch-marble"], "type" : "optional", "client" : { "name" : "Fetch marble" } },
+        "storagehouse-fetch-bricks" : { "reactions" : ["storagehouse-fetch-bricks"], "type" : "optional", "client" : { "name" : "Fetch bricks" } }
     },
 
     "buildings" : {
     "economy/storagehouse" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
-            "reactions" : [ "erosion-1", "storagehouse-fetch-wood", "storagehouse-fetch-stone", "storagehouse-fetch-loam", "storagehouse-fetch-marble" ],
-            "neighbors" : { "producer-wood" : 10, "producer-loam" : 10, "producer-marble" : 10, "producer-stone" : 10 },
-            "reaction-slots" : 5,
+            "reactions" : [ "erosion-1", "storagehouse-fetch-wood", "storagehouse-fetch-stone", "storagehouse-fetch-loam", "storagehouse-fetch-marble", "storagehouse-fetch-bricks" ],
+            "neighbors" : { "producer-wood" : 10, "producer-loam" : 10, "producer-marble" : 10, "producer-stone" : 10, "producer-bricks" : 10 },
+            "reaction-slots" : 10,
             "inventory-limits" : {},
             "inventory" : {},
             "client" : {

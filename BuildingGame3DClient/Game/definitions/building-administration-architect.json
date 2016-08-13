@@ -15,10 +15,11 @@
         "erosion-2" : { "reactants" : {}, "products" : { "add" : { "erosion" : 1 } }, "duration" : 8, "require" : {} },
         "erosion-destroy" : { "reactants" : { "erosion" : 100 }, "products" : {}, "transmute" : { "building-type" : "environment/ruins", "action" : { "set" : { "erosion" : 0} }  }, "duration" : 1 },
         
-        "architect-repair-wood" : { "reactants" : { "erosion" : 5, "worktime" : 1 }, "products" : {}, "duration" : 1, "sources" : ["erosion/wood", "worktimesource"] },
-        "architect-repair-loam" : { "reactants" : { "erosion" : 5, "worktime" : 1 }, "products" : {}, "duration" : 1, "sources" : ["erosion/loam", "worktimesource"] },
-        "architect-repair-stone" : { "reactants" : { "erosion" : 5, "worktime" : 1 }, "products" : {}, "duration" : 1, "sources" : ["erosion/stone", "worktimesource"] },
-        "architect-repair-marble" : { "reactants" : { "erosion" : 5, "worktime" : 1 }, "products" : {}, "duration" : 1, "sources" : ["erosion/marble", "worktimesource"] }
+        "architect-repair-wood" : { "reactants" : { "erosion" : 20, "worktime" : 1 }, "products" : {}, "duration" : 1, "sources" : ["erosion/wood", "worktimesource"] },
+        "architect-repair-loam" : { "reactants" : { "erosion" : 20, "worktime" : 1 }, "products" : {}, "duration" : 1, "sources" : ["erosion/loam", "worktimesource"] },
+        "architect-repair-bricks" : { "reactants" : { "erosion" : 20, "worktime" : 1 }, "products" : {}, "duration" : 1, "sources" : ["erosion/bricks", "worktimesource"] },
+        "architect-repair-stone" : { "reactants" : { "erosion" : 20, "worktime" : 1 }, "products" : {}, "duration" : 1, "sources" : ["erosion/stone", "worktimesource"] },
+        "architect-repair-marble" : { "reactants" : { "erosion" : 20, "worktime" : 1 }, "products" : {}, "duration" : 1, "sources" : ["erosion/marble", "worktimesource"] }
     },
     
     "reaction-sets" : {
@@ -27,14 +28,14 @@
         "erosion-1" : { "reactions" : [ "erosion-1", "erosion-destroy" ], "type" :  "mandatory", "client" : { "name" : "Erosion", "icon" : "res://UI/Icons/Reactions/erosion.png" } },
         "erosion-2" : { "reactions" : [ "erosion-2", "erosion-destroy" ], "type" :  "mandatory", "client" : { "name" : "Erosion", "icon" : "res://UI/Icons/Reactions/erosion.png" } },
         
-        "architect-repair" : { "reactions" : [ "architect-repair-wood", "architect-repair-loam", "architect-repair-stone", "architect-repair-marble" ], "type" : "default", "client" : { "name" : "Repair buildings", "icon" : "res://UI/Icons/Reactions/build.png" } }
+        "architect-repair" : { "reactions" : [ "architect-repair-wood", "architect-repair-loam", "architect-repair-stone", "architect-repair-marble", "architect-repair-bricks" ], "type" : "default", "client" : { "name" : "Repair buildings", "icon" : "res://UI/Icons/Reactions/build.png" } }
     },
 
     "buildings" : {
     "administration/architect" : {
             "type" : "building",
             "max-neighbor-distance" : 0,
-            "reactions" : [ "erosion-1", "architect-repair" ],
+            "reactions" : [ "architect-repair" ],
             "neighbors" : { "erosion/wood" : 20, "erosion/stone" : 20, "erosion/loam" : 20, "erosion/marble" : 20, "economy/storagehouse" : 100, "worktimesource" : 20 },
             "reaction-slots" : 1,
             "inventory-limits" : { "worktime" : 10 },

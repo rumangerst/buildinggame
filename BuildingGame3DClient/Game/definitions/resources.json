@@ -33,6 +33,10 @@
         "clay" : { "client" : { "name" : "Clay" } },
         "loam" : { "client" : { "name" : "Loam" } },
         "marble" : { "client" : { "name" : "Marble" } },
+        
+        "bricks" : { "client" : { "name" : "Bricks" } },
+        
+        "wool" : { "client" : { "name" : "Wool" } },
     
         "fertility" : { "client" : { "name" : "Fertility" } },
         "fresh-water" : { "client" : { "name" : "Fresh water" } },
